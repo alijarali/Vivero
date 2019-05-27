@@ -13,6 +13,7 @@ import tipos.TpHoja;
  */
 public abstract class Planta extends Producto {
 	private TpHoja TipoHoja;
+	private Integer altura;
 	
 	
 	public Planta(String codigo) {
