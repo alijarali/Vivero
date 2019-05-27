@@ -16,8 +16,8 @@ public abstract class Planta extends Producto {
 	private Integer altura;
 	
 	
-	public Planta(String codigo) {
-		super(codigo);
+	public Planta() {
+		super();
 	}
 	public Planta(String codigo, TpHoja tipoHoja) {
 		super(codigo);
