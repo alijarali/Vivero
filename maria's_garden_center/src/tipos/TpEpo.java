@@ -6,6 +6,7 @@ package tipos;
  * 	- Invierno: Árbol/Arbusto de Invierno
  * 	- Anual: Árbol/Arbusto durante todo el año
  * 
+ * 
  * @author Pedro
  * @version 1.0
  */

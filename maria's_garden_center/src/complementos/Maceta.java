@@ -36,4 +36,11 @@ public class Maceta extends Complemento {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Maceta [Capacidad=" + getCapacidad() + ", Altura=" + getAltura() + "]";
+	}
+	
+	
+	
 }
