@@ -5,7 +5,7 @@ package tipos;
  * 	- Verano: Árbol/Arbusto de Verano
  * 	- Invierno: Árbol/Arbusto de Invierno
  * 	- Anual: Árbol/Arbusto durante todo el año
- * a
+ * 
  * @author Pedro
  * @version 1.0
  */

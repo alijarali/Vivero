@@ -3,7 +3,7 @@ package complementos;
 /**
  * Clase para la información de las macetas.
  * 
- * a
+ * 
  * @author Pedro
  * @version 1.0
  */

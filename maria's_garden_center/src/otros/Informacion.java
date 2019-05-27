@@ -7,7 +7,7 @@ import tipos.TpEpo;
  * 	- Abono
  * 	- Arbol
  *  - Arbusto
- * a
+ * 
  * @author Pedro
  * @version 1.0
  */
