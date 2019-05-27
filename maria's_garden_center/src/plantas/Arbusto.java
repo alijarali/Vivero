@@ -5,7 +5,7 @@ public class Arbusto {
 	private Integer vecesRiegoSemana;
 	
 	/**
-	 * constructor por defecto de arbusto
+	 * Constructor por defecto de arbusto.
 	 */
 	public Arbusto() {
 		super();

@@ -1,6 +1,6 @@
 package complementos;
 
-public class Abono {
+public class Abono extends Complemento {
 
 	/**
 	 * Creación del atributo de abono.
