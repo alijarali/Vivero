@@ -1,6 +1,7 @@
 package plantas;
 
 import otros.Producto;
+import tipos.TpHoja;
 
 /**
  * Clase Abstracta. Implementarán el método 'getAltura':
@@ -8,10 +9,20 @@ import otros.Producto;
  *  - Arbol
  * 
  * @author Pedro
- * @version 1.0
+ * @version 1.1 -> Añado importacion TpHoja y constructor
  */
 public abstract class Planta extends Producto {
 	private TpHoja TipoHoja;
 	
+	
+	public Planta(String codigo) {
+		super(codigo);
+	}
+	public Planta(String codigo, TpHoja tipoHoja) {
+		super(codigo);
+		TipoHoja = tipoHoja;
+	}
+
+
 	public abstract Integer getAltura();
 }
