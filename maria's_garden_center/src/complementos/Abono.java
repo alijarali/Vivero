@@ -3,7 +3,7 @@ package complementos;
 public class Abono extends Complemento {
 
 	/**
-	 * Creación del atributo de abono.
+	 * Creación del atributo componentes.
 	 */
 	private String componentes;
 

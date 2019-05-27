@@ -1,8 +1,10 @@
 package plantas;
 
-public class Arbol {
+public class Arbol extends Planta {
 	/**
-	 * Creación de los atributos de árbol.
+	 * Creación de los atributos de árbol : 
+	 * - Fruta
+	 * - diamBase
 	 */
 	private String fruta;
 	private Integer diamBase;
@@ -39,6 +41,11 @@ public class Arbol {
 	@Override
 	public String toString() {
 		return "Arbol [fruta=" + fruta + ", diamBase=" + diamBase + "]";
+	}
+	@Override
+	public Integer getAltura() {
+		
+		return this.getAltura();
 	}
 	
 }
