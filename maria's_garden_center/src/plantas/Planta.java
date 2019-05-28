@@ -9,7 +9,7 @@ import tipos.TpHoja;
  *  - Arbol
  * 
  * @author Pedro
- * @version 1.1 -> Añado importacion TpHoja y constructor
+ * @version 1.1 -> Añado importacion TpHoja y constructor 
  */
 public abstract class Planta extends Producto {
 	private TpHoja TipoHoja;
@@ -19,6 +19,7 @@ public abstract class Planta extends Producto {
 	public Planta() {
 		super();
 	}
+	
 	public Planta(String codigo, TpHoja tipoHoja) {
 		super(codigo);
 		TipoHoja = tipoHoja;
