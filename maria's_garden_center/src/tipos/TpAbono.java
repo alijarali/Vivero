@@ -5,7 +5,7 @@ package tipos;
  *enumeración de tipos de abono
  */
 public enum TpAbono {
-	NATURAL(), ARTIFICIAL(), MIXTO();
+	NATURAL, ARTIFICIAL, MIXTO;
 
 	}
 	

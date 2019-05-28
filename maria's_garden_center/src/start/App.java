@@ -7,7 +7,7 @@ import otros.Producto;
 
 public class App {
 
-	List<Producto> lstProductos=new ArrayList<>();
+	public static List<Producto> lstProductos=new ArrayList<>();
 
 /**
  * El main nos mostrará el menú
