@@ -11,7 +11,7 @@ public class Abono extends Complemento {
 	private TpAbono tipoAbono;
 	
 	/**
-	 * Creación del constructor.
+	 * Creación de los constructores.
 	 * @param componentes
 	 */
 	public Abono() {
