@@ -27,5 +27,27 @@ public abstract class Planta extends Producto {
 	}
 
 
-	public abstract Integer getAltura();
+	public TpHoja getTipoHoja() {
+		return tipoHoja;
+	}
+
+	public void setTipoHoja(TpHoja tipoHoja) {
+		this.tipoHoja = tipoHoja;
+	}
+
+	public void setAltura(Integer altura) {
+		this.altura = altura;
+	}
+
+	public Integer getAltura() {
+		return altura;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Planta [tipoHoja=" + tipoHoja + ", altura=" + altura + ", getCodigo()=" + getCodigo() + "]";
+	}
+	
+	
 }
