@@ -1,5 +1,7 @@
 package plantas;
 
+import tipos.TpHoja;
+
 public class Arbol extends Planta {
 	/**
 	 * Creación de los atributos de árbol : 
@@ -9,13 +11,18 @@ public class Arbol extends Planta {
 	private String fruta;
 	private Integer diamBase;
 	
+	
 	/**
-	 * Creación del constructor.
+	 * Creación de los constructores.
 	 * @param fruta
 	 * @param diamBase
 	 */
-	public Arbol(String fruta, Integer diamBase) {
+	public Arbol() {
 		super();
+	}
+	
+	public Arbol(String codigo,TpHoja tipoHoja, Integer altura, String fruta, Integer diamBase) {
+		super(codigo,tipoHoja, altura);
 		this.fruta = fruta;
 		this.diamBase = diamBase;
 	}
