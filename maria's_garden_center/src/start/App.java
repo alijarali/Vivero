@@ -1,6 +1,13 @@
 package start;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import otros.Producto;
+
 public class App {
+
+	List<Producto> lstProductos=new ArrayList<>();
 
 /**
  * El main nos mostrará el menú
@@ -36,11 +43,15 @@ public class App {
 
 			break;
 		case 4:
+			opciones.CargarLista.cargarLista();
+			break;
+		case 5:
 			opciones.Listar.listar();
 			break;
 		}
+		}
 
-	}
+	
 
 	private static void mostrarMenu() {
 		System.out.println("\n MENU PRINCIPAL");
@@ -48,7 +59,8 @@ public class App {
 		System.out.println("1. Añadir elemento");
 		System.out.println("2. Borrar elemento");
 		System.out.println("3. Modificar elemento");
-		System.out.println("4. Listar");
+		System.out.println("4. Modificar elemento");
+		System.out.println("5. Listar");
 
 	}
 
