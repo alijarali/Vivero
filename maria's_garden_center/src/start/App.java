@@ -5,6 +5,7 @@ public class App {
 /**
  * El main nos mostrará el menú
  * @param args
+ * @author Alicia
  */
 	public static void main(String[] args) {
 
@@ -25,17 +26,17 @@ public class App {
 	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
 		case 1:
-			Opciones.aniadirElemento();;
+			opciones.AniadirElemento.aniadirElemento();
 			break;
 		case 2:
-			Opciones.borrarElemento();;
+			opciones.BorrarElemento.borrarElemento();
 			break;
 		case 3:
-			Opciones.modificarElemento();
+			opciones.ModificarElemento.modificarElemento();
 
 			break;
 		case 4:
-			Opciones.listar();
+			opciones.Listar.listar();
 			break;
 		}
 

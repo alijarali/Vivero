@@ -1,6 +1,16 @@
 package complementos;
 
-public class Complemento {
+import otros.Producto;
+
+/**
+ * Clase complemento que hereda de producto 
+ * es padre de abono y maceta
+ * @author Alicia
+ *
+ */
+public class Complemento extends Producto {
+
+	
 
 	private Integer pesoMaximo;
 	private String proveedor;
@@ -9,6 +19,7 @@ public class Complemento {
 	 * constructor por defecto de Complemento
 	 */
 	public Complemento() {
+		super();
 		
 	}
 	 
@@ -17,8 +28,8 @@ public class Complemento {
 	 * @param pesoMaximo
 	 * @param proveedor
 	 */
-	public Complemento(Integer pesoMaximo, String proveedor) {
-		super();
+	public Complemento(String codigo, Integer pesoMaximo, String proveedor) {
+		super(codigo);
 		this.pesoMaximo = pesoMaximo;
 		this.proveedor = proveedor;
 	}
@@ -56,6 +67,11 @@ public class Complemento {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Complemento [peso Maximo=" + pesoMaximo + ", proveedor=" + proveedor + ", Codigo()=" + getCodigo()
+				+ "]";
+	}
 	
 	
 }

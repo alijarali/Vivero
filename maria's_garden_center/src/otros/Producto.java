@@ -1,7 +1,7 @@
 package otros;
 
 /**
- * 
+ * @author Alicia
  * Esta es la clase principal, de aquí diferenciaremos el resto de productos
  */
 public class Producto {
