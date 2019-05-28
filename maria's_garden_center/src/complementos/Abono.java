@@ -21,7 +21,7 @@ public class Abono extends Complemento {
 	public Abono(String codigo, Integer pesoMaximo, String proveedor, String componentes, TpAbono tipoAbono) {
 		super(codigo, pesoMaximo, proveedor);
 		this.componentes = componentes;
-		this.tipoAbono = tipoAbono;
+		this.setTipoAbono(tipoAbono);
 	}
 
 	/**
@@ -42,6 +42,14 @@ public class Abono extends Complemento {
 	public String toString() {
 		return "Abono [componentes=" + componentes + "]";
 	}
+
+	public TpAbono getTipoAbono() {
+	return tipoAbono;
+}
+
+	public void setTipoAbono(TpAbono tipoAbono) {
+	this.tipoAbono = tipoAbono;
+}
 	
 	
 }
