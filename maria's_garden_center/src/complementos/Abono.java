@@ -1,19 +1,27 @@
 package complementos;
 
+import tipos.TpAbono;
+
 public class Abono extends Complemento {
 
 	/**
 	 * Creación del atributo componentes.
 	 */
 	private String componentes;
-
+	private TpAbono tipoAbono;
+	
 	/**
 	 * Creación del constructor.
 	 * @param componentes
 	 */
-	public Abono(String componentes) {
+	public Abono() {
 		super();
+	}
+	
+	public Abono(String codigo, Integer pesoMaximo, String proveedor, String componentes, TpAbono tipoAbono) {
+		super(codigo, pesoMaximo, proveedor);
 		this.componentes = componentes;
+		this.tipoAbono = tipoAbono;
 	}
 
 	/**
