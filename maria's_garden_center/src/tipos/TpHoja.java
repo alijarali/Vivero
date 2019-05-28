@@ -7,6 +7,6 @@ public enum TpHoja {
 	 * 	- Perenne.
 	 * 	- Otro.
 	 */
-	CADUCA(), PERENNE(), OTRO();
+	CADUCA, PERENNE, OTRO;
 
 }
