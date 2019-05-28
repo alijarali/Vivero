@@ -1,6 +1,13 @@
 package plantas;
 
-public class Arbusto {
+import tipos.TpHoja;
+
+/**
+ * clase arbusto, que hereda de planta
+ * @author Alicia
+ *
+ */
+public class Arbusto extends Planta {
 	private String colorFlor;
 	private Integer vecesRiegoSemana;
 	
@@ -15,8 +22,8 @@ public class Arbusto {
 	 * @param colorFlor
 	 * @param vecesRiegoSemana
 	 */
-	public Arbusto(String colorFlor, Integer vecesRiegoSemana) {
-		super();
+	public Arbusto(String codigo, TpHoja TipoHoja, Integer altura, String colorFlor, Integer vecesRiegoSemana) {
+		super(codigo, TipoHoja, altura);
 		this.colorFlor = colorFlor;
 		this.vecesRiegoSemana = vecesRiegoSemana;
 	}
@@ -52,6 +59,22 @@ public class Arbusto {
 	public void setVecesRiegoSemana(Integer vecesRiegoSemana) {
 		this.vecesRiegoSemana = vecesRiegoSemana;
 	}
+	
+	
+	
+	
+
+@Override
+public String toString() {
+	return "Arbusto [colorFlor=" + colorFlor + ", ColorFlor="
+			+ getColorFlor() + ", Veces Riego Semana=" + getVecesRiegoSemana() + ", Altura=" + getAltura()
+			+ ", Codigo=" + getCodigo() + "]";
+}
+@Override
+public Integer getAltura() {
+	// TODO Auto-generated method stub
+	return null;
+}
 	
 	
 
