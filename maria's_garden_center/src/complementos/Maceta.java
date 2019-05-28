@@ -15,8 +15,8 @@ public class Maceta extends Complemento {
 	public Maceta() {
 		super();
 	}
-	public Maceta(Integer capacidad, Integer altura) {
-		super();
+	public Maceta(String codigo, Integer pesoMaximo, String proveedor, Integer capacidad, Integer altura) {
+		super(codigo, pesoMaximo, proveedor);
 		this.capacidad = capacidad;
 		this.altura = altura;
 	}
