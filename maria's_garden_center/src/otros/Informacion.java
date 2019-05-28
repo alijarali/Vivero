@@ -6,10 +6,10 @@ import tipos.TpEpo;
  * Interfaz que han de implementar:
  * 	- Abono
  * 	- Arbol
- *  - Arbusto
+ *  - Arbusto 
  * 
  * @author Pedro
- * @version 1.0
+ * @version 1.1
  */
 public interface Informacion {
 	//TODO Mirar pq no funciona declarar la variable aqui
