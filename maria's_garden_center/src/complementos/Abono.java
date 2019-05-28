@@ -34,7 +34,15 @@ public class Abono extends Complemento {
 
 	public void setComponentes(String componentes) {
 		this.componentes = componentes;
-	}
+	}	
+	
+	public TpAbono getTipoAbono() {
+	return tipoAbono;
+}
+
+	public void setTipoAbono(TpAbono tipoAbono) {
+	this.tipoAbono = tipoAbono;
+}
 /**
  * Creación del método Java toString.
  */
@@ -43,13 +51,7 @@ public class Abono extends Complemento {
 		return "Abono [componentes=" + componentes + "]";
 	}
 
-	public TpAbono getTipoAbono() {
-	return tipoAbono;
-}
 
-	public void setTipoAbono(TpAbono tipoAbono) {
-	this.tipoAbono = tipoAbono;
-}
 	
 	
 }
