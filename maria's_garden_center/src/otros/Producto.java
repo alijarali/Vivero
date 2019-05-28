@@ -7,6 +7,11 @@ package otros;
 public class Producto {
 private String codigo;
 
+
+public Producto() {
+	;
+}
+
 /**
  * Constructor de Producto
  */
