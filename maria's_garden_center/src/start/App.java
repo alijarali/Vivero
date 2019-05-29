@@ -59,7 +59,7 @@ public class App {
 		System.out.println("1. Añadir elemento");
 		System.out.println("2. Borrar elemento");
 		System.out.println("3. Modificar elemento");
-		System.out.println("4. Modificar elemento");
+		System.out.println("4. Cargar Lista");
 		System.out.println("5. Listar");
 
 	}

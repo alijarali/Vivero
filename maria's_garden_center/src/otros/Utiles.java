@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import otros.Informacion.TpEpo;
+import tipos.TpAbono;
+import tipos.TpHoja;
+
 public class Utiles {
 	
 	/**
@@ -62,4 +66,71 @@ public class Utiles {
 		return Double.parseDouble(respuesta); // cambiamos la respuesta para que nos devuelva un double
 	}
 
+	/**
+	 * Cuando nos dan por pantalla un String lo cambiamos a TpHoja
+	 * @param pregunta
+	 * @return
+	 */
+	public static TpHoja parseStrTpHoja(String pregunta) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		}
+		TpHoja ret=null;
+		
+		switch(respuesta.toUpperCase()) {
+		case "CADUCA": ret= TpHoja.CADUCA; break;
+		case "PERENNE": ret=TpHoja.PERENNE; break;
+		case "OTROS": ret=TpHoja.OTRO; break;
+			}
+		return ret;
+		
+	};
+	
+	public static TpAbono parseStrTpAbono(String pregunta) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		}
+		TpAbono ret=null;
+		
+		switch(respuesta.toUpperCase()) {
+		case "NATURAL": ret= TpAbono.NATURAL; break;
+		case "ARTIFICIAL": ret=TpAbono.ARTIFICIAL; break;
+		case "MIXTO": ret=TpAbono.MIXTO; break;
+			}
+		return ret;
+		
+	};
+	
+	public static TpEpo parseStrTpEpo(String pregunta) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		}
+		TpEpo ret=null;
+		
+		switch(respuesta.toUpperCase()) {
+		case "VERANO": ret= TpEpo.VERANO; break;
+		case "INVIERNO": ret=TpEpo.INVIERNO; break;
+		case "ANUAL": ret=TpEpo.ANUAL; break;
+			}
+		return ret;
+		
+	};
 }

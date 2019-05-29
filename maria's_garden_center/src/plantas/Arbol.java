@@ -1,8 +1,10 @@
 package plantas;
 
+import otros.Informacion;
+
 import tipos.TpHoja;
 
-public class Arbol extends Planta {
+public class Arbol extends Planta implements Informacion{
 	/**
 	 * Creación de los atributos de árbol : 
 	 * - Fruta
@@ -10,7 +12,7 @@ public class Arbol extends Planta {
 	 */
 	private String fruta;
 	private Integer diamBase;
-	
+	private TpEpo epoca;
 	
 	/**
 	 * Creación de los constructores.
@@ -26,6 +28,14 @@ public class Arbol extends Planta {
 		this.fruta = fruta;
 		this.diamBase = diamBase;
 	}
+	
+	public Arbol(String codigo,TpHoja tipoHoja, Integer altura, String fruta, Integer diamBase, TpEpo epoca) {
+		super(codigo,tipoHoja, altura);
+		this.fruta = fruta;
+		this.diamBase = diamBase;
+		this.epoca=epoca;
+	}
+	
 	/**
 	 * Creación de los getters y setters de cada uno de los objetos de abono.
 	 * @return
@@ -54,5 +64,15 @@ public class Arbol extends Planta {
 		
 		return this.getAltura();
 	}
-	
+	@Override
+	public TpEpo getEpoca() {
+
+		return epoca;
+	}
+
+	@Override
+	public void setEpoca(TpEpo epoca) {
+		this.epoca=epoca;
+
+	}
 }

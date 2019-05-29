@@ -1,14 +1,17 @@
 package complementos;
 
+import otros.Informacion;
+
 import tipos.TpAbono;
 
-public class Abono extends Complemento {
+public class Abono extends Complemento implements Informacion{
 
 	/**
 	 * Creación del atributo componentes.
 	 */
 	private String componentes;
 	private TpAbono tipoAbono;
+	private TpEpo epoca;
 	
 	/**
 	 * Creación de los constructores.
@@ -22,6 +25,13 @@ public class Abono extends Complemento {
 		super(codigo, pesoMaximo, proveedor);
 		this.componentes = componentes;
 		this.setTipoAbono(tipoAbono);
+	}
+	
+	public Abono(String codigo, Integer pesoMaximo, String proveedor, String componentes, TpAbono tipoAbono,TpEpo epoca) {
+		super(codigo, pesoMaximo, proveedor);
+		this.componentes = componentes;
+		this.setTipoAbono(tipoAbono);
+		this.epoca=epoca;
 	}
 
 	/**
@@ -51,7 +61,17 @@ public class Abono extends Complemento {
 		return "Abono [componentes=" + componentes + "]";
 	}
 
+	@Override
+	public TpEpo getEpoca() {
 
+		return epoca;
+	}
+
+	@Override
+	public void setEpoca(TpEpo epoca) {
+		this.epoca=epoca;
+
+	}
 	
 	
 }
