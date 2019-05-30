@@ -2,12 +2,15 @@ package opciones;
 
 import otros.Producto;
 import otros.Utiles;
-import start.App;
 
+/**
+ * Esta clase borra elementos de la lista. Primero nos enseñará un listado con sus indices 
+ * a partir de ahí elegimos cual eliminar
+ * @author Alicia
+ *
+ */
 public class BorrarElemento {
-	/**
-	 * este método borra un elemento de la lista de productos
-	 */
+	
 public static void borrarElemento() {
 	for (Producto p : start.App.lstProductos) {
 		System.out.println(start.App.lstProductos.indexOf(p)+p.toString());
