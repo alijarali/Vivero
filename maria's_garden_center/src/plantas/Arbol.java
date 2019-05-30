@@ -52,9 +52,7 @@ public class Arbol extends Planta implements Informacion{
 	public void setDiamBase(Integer diamBase) {
 		this.diamBase = diamBase;
 	}
-	/**
-	 * Creación del método Java toString.
-	 */
+	
 	
 	
 	@Override
@@ -72,11 +70,15 @@ public class Arbol extends Planta implements Informacion{
 	public void setEpoca(TpEpo epoca) {
 		this.epoca=epoca;
 }
-
+	/**
+	 * Creación del método Java toString.
+	 */
 	@Override
 	public String toString() {
-		return "Arbol [fruta=" + fruta + ", diamBase=" + diamBase + ", epoca=" + epoca + ", getTipoHoja()="
-				+ getTipoHoja() + ", getCodigo()=" + getCodigo() + "]";
+		//String codigo,TpHoja tipoHoja, Integer altura, String fruta, Integer diamBase, TpEpo epoca)
+		return "Arbol ["+ " Codigo= " + getCodigo() +"Tipo Hoja= "
+				+ getTipoHoja() + ", Altura"+ getAltura()+", Fruta= " + fruta + ", Diam base= " + diamBase + ", Epoca= " + epoca + ", "
+				+  "]";
 	}
 	
 	

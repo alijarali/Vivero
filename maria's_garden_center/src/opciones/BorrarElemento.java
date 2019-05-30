@@ -12,9 +12,7 @@ import otros.Utiles;
 public class BorrarElemento {
 	
 public static void borrarElemento() {
-	for (Producto p : start.App.lstProductos) {
-		System.out.println(start.App.lstProductos.indexOf(p)+p.toString());
-	}
+	Listar.listar();
 	Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas borrar? ");
 	if(elemento!= null) {
 		String seguro= Utiles.pideDatoCadena("¿Está seguro? S/N ");

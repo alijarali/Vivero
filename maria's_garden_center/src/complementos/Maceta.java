@@ -37,8 +37,9 @@ public class Maceta extends Complemento {
 	}
 	@Override
 	public String toString() {
-		return "Maceta [capacidad=" + capacidad + ", altura=" + altura + ", getPesoMaximo()=" + getPesoMaximo()
-				+ ", getProveedor()=" + getProveedor() + ", getCodigo()=" + getCodigo() + "]";
+		//String codigo, Integer pesoMaximo, String proveedor, Integer capacidad, Integer altura
+		return "Maceta ["+" Codigo()= " + getCodigo() + ", Peso Maximo= " + getPesoMaximo()+
+				", Proveedor= " + getProveedor()+", Capacidad= " + capacidad + ", Altura= " + altura +  "]";
 	}
 	
 	

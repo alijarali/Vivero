@@ -82,8 +82,11 @@ public class Arbusto extends Planta implements Informacion {
 
 	@Override
 	public String toString() {
-		return "Arbusto [colorFlor=" + colorFlor + ", vecesRiegoSemana=" + vecesRiegoSemana + ", epoca=" + epoca
-				+ ", getTipoHoja()=" + getTipoHoja() + ", getCodigo()=" + getCodigo() + "]";
+		//String codigo, TpHoja TipoHoja, Integer altura, String colorFlor, Integer vecesRiegoSemana,TpEpo epoca
+		return "Arbusto ["+ " Codigo= " + getCodigo() + ", Tipo Hoja= " + getTipoHoja()+", Altura= "+getAltura()
++	", Color flor=" + colorFlor + ", Veces riego semana=" + vecesRiegoSemana +
+				", epoca=" + epoca
+				 +  "]";
 	}
 
 	@Override
