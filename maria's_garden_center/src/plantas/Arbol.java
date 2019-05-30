@@ -55,10 +55,8 @@ public class Arbol extends Planta implements Informacion{
 	/**
 	 * Creación del método Java toString.
 	 */
-	@Override
-	public String toString() {
-		return "Arbol [fruta=" + fruta + ", diamBase=" + diamBase + "]";
-	}
+	
+	
 	@Override
 	public Integer getAltura() {
 		
@@ -73,6 +71,14 @@ public class Arbol extends Planta implements Informacion{
 	@Override
 	public void setEpoca(TpEpo epoca) {
 		this.epoca=epoca;
+}
 
+	@Override
+	public String toString() {
+		return "Arbol [fruta=" + fruta + ", diamBase=" + diamBase + ", epoca=" + epoca + ", getTipoHoja()="
+				+ getTipoHoja() + ", getCodigo()=" + getCodigo() + "]";
 	}
+	
+	
+	
 }

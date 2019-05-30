@@ -78,10 +78,12 @@ public class Arbusto extends Planta implements Informacion {
 		this.vecesRiegoSemana = vecesRiegoSemana;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Arbusto [colorFlor=" + colorFlor + ", ColorFlor=" + getColorFlor() + ", Veces Riego Semana="
-				+ getVecesRiegoSemana() + ", Altura=" + getAltura() + ", Codigo=" + getCodigo() + "]";
+		return "Arbusto [colorFlor=" + colorFlor + ", vecesRiegoSemana=" + vecesRiegoSemana + ", epoca=" + epoca
+				+ ", getTipoHoja()=" + getTipoHoja() + ", getCodigo()=" + getCodigo() + "]";
 	}
 
 	@Override

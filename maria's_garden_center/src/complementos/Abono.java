@@ -53,13 +53,11 @@ public class Abono extends Complemento implements Informacion{
 	public void setTipoAbono(TpAbono tipoAbono) {
 	this.tipoAbono = tipoAbono;
 }
-/**
- * Creación del método Java toString.
- */
-	@Override
-	public String toString() {
-		return "Abono [componentes=" + componentes + "]";
-	}
+@Override
+public String toString() {
+	return "Abono [componentes=" + componentes + ", tipoAbono=" + tipoAbono + ", epoca=" + epoca + ", getPesoMaximo()="
+			+ getPesoMaximo() + ", getProveedor()=" + getProveedor() + ", getCodigo()=" + getCodigo() + "]";
+}
 
 	@Override
 	public TpEpo getEpoca() {

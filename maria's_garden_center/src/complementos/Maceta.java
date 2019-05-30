@@ -35,12 +35,14 @@ public class Maceta extends Complemento {
 	public void setAltura(Integer altura) {
 		this.altura = altura;
 	}
-	
-	
 	@Override
 	public String toString() {
-		return "Maceta [Capacidad=" + getCapacidad() + ", Altura=" + getAltura() + "]";
+		return "Maceta [capacidad=" + capacidad + ", altura=" + altura + ", getPesoMaximo()=" + getPesoMaximo()
+				+ ", getProveedor()=" + getProveedor() + ", getCodigo()=" + getCodigo() + "]";
 	}
+	
+	
+	
 	
 	
 	
