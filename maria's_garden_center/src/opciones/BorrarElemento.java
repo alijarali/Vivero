@@ -11,7 +11,7 @@ import otros.Utiles;
  */
 public class BorrarElemento {
 
-	@SuppressWarnings("unlikely-arg-type")
+
 	public static void borrarElemento() {
 		Integer l = start.App.lstProductos.size();
 		if (l == 0) {
@@ -35,9 +35,7 @@ public class BorrarElemento {
 					System.out.println("Volvemos al menú principal");
 					;
 					break;
-				case "N":
-					System.out.println("Volvemos al menú principal");
-					break;
+				
 				}
 			}
 		}
