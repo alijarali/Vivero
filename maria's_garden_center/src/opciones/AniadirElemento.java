@@ -13,32 +13,48 @@ import tipos.TpHoja;
  * añadimos elementos a la lista
  * 
  * @author Alicia
- *
+ * @version 1.1 - Modifico la forma de pedir el tipo de elemento a introducir
  */
 public class AniadirElemento {
 	/**
 	 * este método nos pide el tipo del producto que queremos meter y lo asocia a un método para cada tipo
 	 */
 	public static void aniadirElemento() {
-		String tipoElemento = Utiles
-				.pideDatoCadenaMinusculas("¿Qué tipo de elemento vas a querer introducir? Elija entre las siguientes opciones: \n -Árbol \n -Arbusto \n -Abono \n -Maceta\n  ");
+		boolean incorrecto = true; //Controla si la opción elegida por el usuario es correcta o no
 		
-		switch (tipoElemento) {
-		case "arbusto":
-			aniadirArbusto();
-			break;
-
-		case "arbol":
-			aniadirArbol();
-			break;
-
-		case "abono":
-			aniadirAbono();
-			break;
-
-		case "maceta":
-			aniadirMaceta();
-			break;
+		while(incorrecto) {
+			Integer tipoElemento = Utiles.pideDatoEntero("\n\n¿Qué tipo de elemento vas a querer introducir? "
+							+ " \n 1. Arbusto \n 2. Árbol \n 3. Abono \n 4. Maceta\nNúmero de Elemento:");
+			
+			switch (tipoElemento) {
+			case 1:
+				aniadirArbusto();
+				incorrecto = false;
+				break;
+	
+			case 2:
+				aniadirArbol();
+				incorrecto = false;
+				break;
+	
+			case 3:
+				aniadirAbono();
+				incorrecto = false;
+				break;
+	
+			case 4:
+				aniadirMaceta();
+				incorrecto = false;
+				break;
+				
+			default:
+				if(incorrecto) {
+					String respuesta = "\n\n- - - - - - - - - - - - - - - - - - - - - \n";
+					respuesta = respuesta.concat("El valor introducido no es correcto.\n");
+					respuesta = respuesta.concat("- - - - - - - - - - - - - - - - - - - - - ");
+					System.out.println(respuesta);
+				}
+			}
 		}
 
 	}
