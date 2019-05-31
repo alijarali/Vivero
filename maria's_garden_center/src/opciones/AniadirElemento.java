@@ -59,8 +59,8 @@ public class AniadirElemento {
 		pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
 		proveedor = Utiles.pideDatoCadena("Proveedor: ");
 		String componentes = Utiles.pideDatoCadena("Componentes: ");
-		TpAbono abono = Utiles.parseStrTpAbono("Tipo de abono: ");
-		epoca = Utiles.parseStrTpEpo("Época de siembra: ");
+		TpAbono abono = Utiles.parseStrTpAbono("Tipo de abono: \n -Natural \n -Artificial \n -Mixto ");
+		epoca = Utiles.parseStrTpEpo("Época de siembra: \n -Verano \n -Invierno \n -Anual ");
 
 		Abono a = new Abono(codigo, pesoMaximo, proveedor, componentes, abono, epoca);
 		start.App.lstProductos.add(a);
@@ -100,11 +100,11 @@ public class AniadirElemento {
 		TpEpo epoca;
 
 		codigo = Utiles.pideDatoCadena("Código: ");
-		hoja = Utiles.parseStrTpHoja("Tipo de hoja: ");
+		hoja = Utiles.parseStrTpHoja("Tipo de hoja: \n -Caduca \n -Perenne \n -Otro ");
 		altura = Utiles.pideDatoEntero("Altura: ");
 		String colorFlor = Utiles.pideDatoCadena("Color de flor: ");
 		Integer vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana: ");
-		epoca = Utiles.parseStrTpEpo("Época de siembra: ");
+		epoca = Utiles.parseStrTpEpo("Época de siembra: \n -Verano \n -Invierno \n -Anual ");
 
 		Arbusto a = new Arbusto(codigo, hoja, altura, colorFlor, vecesRiegoSemana, epoca);
 		start.App.lstProductos.add(a);
