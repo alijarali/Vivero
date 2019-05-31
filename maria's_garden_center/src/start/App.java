@@ -57,7 +57,7 @@ public class App {
 		System.out.println("***************************************");
 		System.out.println("* BIENVENIDOS A MARIA'S GARDEN CENTER *");
 		System.out.println("***************************************");
-		System.out.println("MENU PRINCIPAL");
+		System.out.println("MENÚ PRINCIPAL");
 		System.out.println("===============");
 		System.out.println("1. Añadir elemento");
 		System.out.println("2. Borrar elemento");
