@@ -64,8 +64,6 @@ public class AniadirElemento {
 	 * @author Alicia
 	 */
 	public static void aniadirAbono() {
-		// String codigo, Integer pesoMaximo, String proveedor, String componentes,
-		// TpAbono tipoAbono,TpEpo epoca
 		String codigo;
 		TpEpo epoca;
 		Integer pesoMaximo;
