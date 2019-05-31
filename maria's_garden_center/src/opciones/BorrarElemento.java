@@ -30,7 +30,7 @@ public class BorrarElemento {
 					System.out.println("Se ha borrado el producto de la lista. \n");
 					;
 					break;
-
+				case"n": ; break;
 				}
 			}
 		}
