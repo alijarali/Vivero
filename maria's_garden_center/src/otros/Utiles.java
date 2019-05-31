@@ -27,7 +27,19 @@ public class Utiles {
 		}
 		return respuesta;
 	}
-
+	public static String pideDatoCadenaMinusculas(String pregunta) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine().toLowerCase();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		}
+		return respuesta;
+	}
 /**
  * Este método sirve para pedir datos por pantalla de tipo numero entero
  * @param pregunta
