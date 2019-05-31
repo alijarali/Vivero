@@ -16,27 +16,27 @@ public class BorrarElemento {
 		Integer l = start.App.lstProductos.size();
 		if (l == 0) {
 			System.out.println(
-					"Lista vacía.Puedes añadir productos mediante la opción 'Añadir elemento' o cargar el catálogo con la opción 'Cargar lista' ");
+					"Lista vacía. Puede añadir productos mediante la opción 'Añadir elemento' o cargar el catálogo con la opción 'Cargar lista' ");
 		} else {
 
 			Listar.listar();
 
-			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas borrar? ");
+			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento desea borrar? ");
 			if (elemento != null) {
 				String seguro = Utiles.pideDatoCadenaMinusculas("¿Está seguro? S/N ");
 				switch (seguro) {
 				case "s":
 					start.App.lstProductos.remove((elemento-1));
-					System.out.println("Se ha borrado el producto de la lista \n");
+					System.out.println("Se ha borrado el producto de la lista. \n");
 					;
 					break;
 			
 				case "n":
-					System.out.println("Volvemos al menú principal");
+					System.out.println("Volver al menú principal");
 					;
 					break;
 				case "N":
-					System.out.println("Volvemos al menú principal");
+					System.out.println("Volver al menú principal");
 					break;
 				}
 			}

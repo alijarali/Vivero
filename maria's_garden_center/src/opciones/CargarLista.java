@@ -9,7 +9,7 @@ import tipos.TpHoja;
 
 public class CargarLista {
 	/**
-	 * este método borra un elemento de la lista de productos
+	 * Este método borra un elemento de la lista de productos
 	 */
 public static void cargarLista() {
 		start.App.lstProductos.add(new Maceta("m001",3, "Green shop",3,2));
