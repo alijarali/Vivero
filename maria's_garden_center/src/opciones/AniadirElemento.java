@@ -21,7 +21,7 @@ public class AniadirElemento {
 	 */
 	public static void aniadirElemento() {
 		String tipoElemento = Utiles
-				.pideDatoCadena("¿Qué tipo de elemento vas a querer introducir?(arbol,arbusto,abono,maceta)  ");
+				.pideDatoCadena("¿Qué tipo de elemento vas a querer introducir? Elija entre las siguientes opciones: -Árbol \n -Arbusto \n -Abono \n  -Maceta\n  ");
 		
 		switch (tipoElemento) {
 		case "arbusto":

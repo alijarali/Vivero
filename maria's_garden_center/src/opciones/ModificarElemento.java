@@ -12,7 +12,7 @@ import tipos.TpHoja;
 
 public class ModificarElemento {
 	/**
-	 * este método modifica un elemento de la lista de productos. Si la lista está
+	 * Este método modifica un elemento de la lista de productos. Si la lista está
 	 * vacía nos enseña y mensaje y vuelve al menñu principal. Si no, nos enseñará
 	 * un listado con sus indices a partir de ahí elegimos cual modificar.
 	 */
