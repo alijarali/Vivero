@@ -78,11 +78,11 @@ public class AniadirElemento {
 		TpEpo epoca;
 
 		codigo = Utiles.pideDatoCadena("Código: ");
-		hoja = Utiles.parseStrTpHoja("Tipo de hoja: ");
+		hoja = Utiles.parseStrTpHoja("Tipo de hoja: \n -Caduca \n -Perenne \n -Otro ");
 		altura = Utiles.pideDatoEntero("Altura: ");
 		String fruta = Utiles.pideDatoCadena("Fruta: ");
 		Integer diametroBase = Utiles.pideDatoEntero("Diametro de la base: ");
-		epoca = Utiles.parseStrTpEpo("Época de siembra: ");
+		epoca = Utiles.parseStrTpEpo("Época de siembra: \n -Verano \n -Invierno \n -Anual ");
 
 		Arbol a = new Arbol(codigo, hoja, altura, fruta, diametroBase, epoca);
 		start.App.lstProductos.add(a);
