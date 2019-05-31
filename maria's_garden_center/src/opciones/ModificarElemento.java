@@ -26,7 +26,7 @@ public class ModificarElemento {
 
 			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas modificar? ");
 
-			Producto elementoModificar = start.App.lstProductos.get(elemento);
+			Producto elementoModificar = start.App.lstProductos.get((elemento-1));
 			if (elementoModificar instanceof Arbusto) {
 				modificarArbusto((Arbusto) elementoModificar);
 			} else {
@@ -113,7 +113,7 @@ public class ModificarElemento {
 		e.setProveedor(proveedor);
 		String componentes = Utiles.pideDatoCadena("Componentes: ");
 		e.setComponentes(componentes);
-		TpAbono abono = Utiles.parseStrTpAbono("Tipo de abono: ");
+		TpAbono abono = Utiles.parseStrTpAbono("Tipo de abono (NATURAL/ARTIFICIAL/MIXTO): ");
 		e.setTipoAbono(abono);
 		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
 		e.setEpoca(epoca);

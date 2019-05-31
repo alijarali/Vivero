@@ -7,9 +7,11 @@ public class Listar {
 	 * Este método muestra la lista de productos.
 	 */
 	public static void listar() {
+	Integer	indice=0;
 		if(start.App.lstProductos.size()!=0) {
 		for (Producto p : start.App.lstProductos) {
-			System.out.println(start.App.lstProductos.indexOf(p)+"  "+p.toString());
+			indice=start.App.lstProductos.indexOf(p)+1;
+			System.out.println(indice+"  "+p.toString());
 		}
 	}else {
 		System.out.println("No hay elementos en la lista. Puedes añadirlos mediante la opción 'añadir elemento' o cargar el catálogo con la opción 'cargar lista'.");

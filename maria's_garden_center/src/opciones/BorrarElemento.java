@@ -23,17 +23,14 @@ public class BorrarElemento {
 
 			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas borrar? ");
 			if (elemento != null) {
-				String seguro = Utiles.pideDatoCadena("¿Está seguro? S/N ");
+				String seguro = Utiles.pideDatoCadenaMinusculas("¿Está seguro? S/N ");
 				switch (seguro) {
 				case "s":
-					start.App.lstProductos.remove(elemento);
+					start.App.lstProductos.remove((elemento-1));
 					System.out.println("Se ha borrado el producto de la lista \n");
 					;
 					break;
-				case "S":
-					start.App.lstProductos.remove(elemento);
-					System.out.println("Se ha borrado el producto de la lista \n");
-					break;
+			
 				case "n":
 					System.out.println("Volvemos al menú principal");
 					;
