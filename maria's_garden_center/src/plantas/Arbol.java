@@ -70,8 +70,8 @@ public class Arbol extends Planta implements Informacion{
 	@Override
 	public String toString() {
 		//String codigo,TpHoja tipoHoja, Integer altura, String fruta, Integer diamBase, TpEpo epoca)
-		return "Arbol ["+ " Codigo= " + getCodigo() +"Tipo Hoja= "
-				+ getTipoHoja() + ", Altura"+ getAltura()+", Fruta= " + fruta + ", Diam base= " + diamBase + ", Epoca= " + epoca + ", "
+		return "Árbol ["+ " Codigo: " + getCodigo() + " Tipo Hoja: "
+				+ getTipoHoja() + ", Altura: "+ getAltura()+", Fruta: " + fruta + ", Diámetro base: " + diamBase + ", Época: " + epoca + ", "
 				+  "]";
 	}
 	

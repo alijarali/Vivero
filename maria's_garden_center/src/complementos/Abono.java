@@ -56,9 +56,9 @@ public class Abono extends Complemento implements Informacion{
 @Override
 public String toString() {
 //	String codigo, Integer pesoMaximo, String proveedor, String componentes, TpAbono tipoAbono,TpEpo epoca
-	return "Abono ["+ " Codigo= " + getCodigo()+ ", Peso Maximo= "
-			+ getPesoMaximo() +", Proveedor= " + getProveedor()  + ", Componentes= " + componentes + 
-			", Tipo Abono= " + tipoAbono + ", Epoca=" + epoca + "]";
+	return "Abono ["+ " Codigo: " + getCodigo()+ ", Peso Máximo: "
+			+ getPesoMaximo() +", Proveedor: " + getProveedor()  + ", Componentes: " + componentes + 
+			", Tipo Abono: " + tipoAbono + ", Época: " + epoca + "]";
 }
 
 	@Override

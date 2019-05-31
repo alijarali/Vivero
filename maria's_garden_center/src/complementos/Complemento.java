@@ -69,7 +69,7 @@ public class Complemento extends Producto {
 	
 	@Override
 	public String toString() {
-		return "Complemento [peso Maximo=" + pesoMaximo + ", proveedor=" + proveedor + ", Codigo()=" + getCodigo()
+		return "Complemento [Peso Máximo: " + pesoMaximo + ", Proveedor: " + proveedor + ", Código: " + getCodigo()
 				+ "]";
 	}
 	

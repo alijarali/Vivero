@@ -46,7 +46,7 @@ public abstract class Planta extends Producto {
 
 	@Override
 	public String toString() {
-		return "Planta [tipoHoja=" + tipoHoja + ", altura=" + altura + ", getCodigo()=" + getCodigo() + "]";
+		return "Planta [tipo de hoja: " + tipoHoja + ", Altura: " + altura + ", Código: " + getCodigo() + "]";
 	}
 	
 	
