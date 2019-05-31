@@ -24,7 +24,7 @@ public class ModificarElemento {
 		} else {
 			Listar.listar();
 
-			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas borrar? ");
+			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas modificar? ");
 
 			Producto elementoModificar = start.App.lstProductos.get(elemento);
 			if (elementoModificar instanceof Arbusto) {
@@ -60,7 +60,7 @@ public class ModificarElemento {
 
 		codigo = Utiles.pideDatoCadena("Código: ");
 		e.setCodigo(codigo);
-		hoja = Utiles.parseStrTpHoja("Tipo de hoja: ");
+		hoja = Utiles.parseStrTpHoja("Tipo de hoja (PERENNE/CADUCA/OTRO): ");
 		e.setTipoHoja(hoja);
 		altura = Utiles.pideDatoEntero("Altura: ");
 		e.setAltura(altura);
@@ -68,7 +68,7 @@ public class ModificarElemento {
 		e.setColorFlor(colorFlor);
 		Integer vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana: ");
 		e.setVecesRiegoSemana(vecesRiegoSemana);
-		epoca = Utiles.parseStrTpEpo("Época de siembra: ");
+		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
 		e.setEpoca(epoca);
 		return e;
 
@@ -84,7 +84,7 @@ public class ModificarElemento {
 
 		codigo = Utiles.pideDatoCadena("Código: ");
 		e.setCodigo(codigo);
-		hoja = Utiles.parseStrTpHoja("Tipo de hoja: ");
+		hoja = Utiles.parseStrTpHoja("Tipo de hoja (PERENNE/CADUCA/OTRO): ");
 		e.setTipoHoja(hoja);
 		altura = Utiles.pideDatoEntero("Altura: ");
 		e.setAltura(altura);
@@ -92,7 +92,7 @@ public class ModificarElemento {
 		e.setFruta(fruta);
 		Integer diametroBase = Utiles.pideDatoEntero("Diametro de la base: ");
 		e.setDiamBase(diametroBase);
-		epoca = Utiles.parseStrTpEpo("Época de siembra: ");
+		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
 		e.setEpoca(epoca);
 		return e;
 	}
@@ -115,7 +115,7 @@ public class ModificarElemento {
 		e.setComponentes(componentes);
 		TpAbono abono = Utiles.parseStrTpAbono("Tipo de abono: ");
 		e.setTipoAbono(abono);
-		epoca = Utiles.parseStrTpEpo("Época de siembra: ");
+		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
 		e.setEpoca(epoca);
 
 		return e;
