@@ -16,7 +16,7 @@ public class BorrarElemento {
 		Integer l = start.App.lstProductos.size();
 		if (l == 0) {
 			System.out.println(
-					"Lista vacía.Puedes añadir productos mediante la opción 'añadir elemento' o cargar el catálogo con la opción 'cargar lista' ");
+					"Lista vacía.Puedes añadir productos mediante la opción 'Añadir elemento' o cargar el catálogo con la opción 'Cargar lista' ");
 		} else {
 
 			Listar.listar();

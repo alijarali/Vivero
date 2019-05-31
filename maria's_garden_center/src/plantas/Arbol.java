@@ -54,12 +54,6 @@ public class Arbol extends Planta implements Informacion{
 	}
 	
 	
-	
-	@Override
-	public Integer getAltura() {
-		
-		return this.getAltura();
-	}
 	@Override
 	public TpEpo getEpoca() {
 
