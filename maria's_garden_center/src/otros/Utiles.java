@@ -48,6 +48,7 @@ public class Utiles {
 	 * 
 	 * @param pregunta
 	 * @return
+	 * @version 1.1 - Trata todos los errores (creo)
 	 */
 	public static Integer pideDatoEntero(String pregunta) {
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
