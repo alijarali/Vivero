@@ -13,12 +13,11 @@ import otros.Utiles;
  */
 public class BorrarElemento {
 
-	@SuppressWarnings("unlikely-arg-type")
+
 	public static void borrarElemento() {
 		Integer tamLista = start.App.lstProductos.size();
 		if (tamLista == 0) {
-			System.out.println("\n\nLista vacía. Puede añadir productos mediante la opción "
-					+ "'Añadir elemento' o cargar el catálogo con la opción 'Cargar lista' ");
+			System.out.println("\n\nLista vacía.\nPuede añadir productos mediante la opción 'Añadir elemento' o cargar el catálogo con la opción 'Cargar lista' ");
 		} else {
 
 			Integer elemento = -1;

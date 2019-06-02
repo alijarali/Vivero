@@ -22,8 +22,7 @@ public class Listar {
 				System.out.println(indice + "  " + p.toString());
 			}
 		}else{
-			System.out.println("No hay elementos en la lista. Puedes añadirlos mediante "
-					+ "la opción 'añadir elemento' o cargar el catálogo con la opción 'cargar lista'.");
+			System.out.println("\nNo hay elementos en la lista.\nPuedes añadirlos mediante la opción 'añadir elemento' o cargar el catálogo con la opción 'cargar lista'.");
 		}
 	}
 }
