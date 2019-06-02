@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import otros.Producto;
+import otros.Utiles;
 
 public class App {
 
@@ -16,15 +17,19 @@ public class App {
 	 * @author Alicia
 	 * @version 1.1 - Corrijo la forma de imprimir el menu y 
 	 * aniado una sentencia que avisa que se cierra el programa
+	 * @version 1.2 - Usa la funcion compruebaOpcionIncorrecta para 
+	 * comprobar si la opcion introducida por el usuario es correcta. 
+	 * Pide que pulses enter cuando escoges listar.
 	 */
 	public static void main(String[] args) {
 
 		int opcion = 0;
 		do {
-
 			mostrarMenu();
-			opcion = otros.Utiles.pideDatoEntero("Opción (0-salir): ");
+			do {
+			opcion = otros.Utiles.pideDatoEntero("Opción: ");
 			ejecutarOpcion(opcion);
+			}while(Utiles.compruebaOpcionIncorrecta(opcion, 0, 5));
 
 		} while (opcion != 0);
 		String respuesta = "";
@@ -44,13 +49,17 @@ public class App {
 			break;
 		case 3:
 			opciones.ModificarElemento.modificarElemento();
-
 			break;
 		case 4:
 			opciones.CargarLista.cargarLista();
 			break;
 		case 5:
 			opciones.Listar.listar();
+			System.out.println("Presione Enter para continuar.");
+			try {
+				System.in.read();
+			} catch (Exception e) {
+			}
 			break;
 		}
 	}
@@ -66,7 +75,9 @@ public class App {
 		menu = menu.concat("2. Borrar elemento\n");
 		menu = menu.concat("3. Modificar elemento\n");
 		menu = menu.concat("4. Cargar Lista\n");
-		menu = menu.concat("5. Listar");
+		menu = menu.concat("5. Listar\n");
+		menu = menu.concat("-------\n");
+		menu = menu.concat("0. Salir");
 		
 		System.out.println(menu);
 	}

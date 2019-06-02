@@ -15,22 +15,25 @@ public class ModificarElemento {
 	 * Este método modifica un elemento de la lista de productos. Si la lista está
 	 * vacía nos enseña y mensaje y vuelve al menñu principal. Si no, nos enseñará
 	 * un listado con sus indices a partir de ahí elegimos cual modificar.
+	 * 
+	 * @version 1.1 - Modifico las funciones 'modificarArbusto', 'modificarArbol', 
+	 * 'modificarAbono' y 'modificarMaceta' para reducir código 
 	 */
 	public static void modificarElemento() {
-		Integer l = start.App.lstProductos.size();
-		if (l == 0) {
+		Integer tamLista = start.App.lstProductos.size();
+		if (tamLista == 0) {
 			System.out.println(
-					"\nLista vacía.\nPuedes añadir productos mediante la opción 'añadir elemento' o cargar el catálogo con la opción 'cargar lista' \n ");
+					"\nLista vacía.\nPuedes añadir productos mediante la opción 'añadir elemento' "
+					+ "o cargar el catálogo con la opción 'cargar lista' \n ");
 		} else {
 			Listar.listar();
 
 			Integer elemento = Utiles.pideDatoEntero("¿Qué elemento deseas modificar? ");
-
 			Producto elementoModificar = start.App.lstProductos.get((elemento - 1));
+			
 			if (elementoModificar instanceof Arbusto) {
 				modificarArbusto((Arbusto) elementoModificar);
 			} else {
-
 				if (elementoModificar instanceof Arbol) {
 					modificarArbol((Arbol) elementoModificar);
 				} else {
@@ -45,163 +48,49 @@ public class ModificarElemento {
 			}
 			System.out.println(elementoModificar);
 		}
-
 	}
 
-	public static Arbusto modificarArbusto(Arbusto e) {
-		// String codigo, TpHoja TipoHoja, Integer altura, String colorFlor, Integer
-		// vecesRiegoSemana,TpEpo epoca
-
-		String codigo;
-		TpHoja hoja;
-		Integer altura;
-		TpEpo epoca;
-
-		codigo = Utiles.pideDatoCadena("Código: ");
-		e.setCodigo(codigo);
+	public static Arbusto modificarArbusto(Arbusto arbusto) {
 		
-		hoja = Utiles.parseStrTpHoja("Tipo de hoja (PERENNE/CADUCA/OTRO): ");
-		e.setTipoHoja(hoja);
-		
-		try {
-			altura = Utiles.pideDatoEntero("Altura: ");
-			e.setAltura(altura);
-		} catch (Exception ex) {
-			System.out.println("\nLa altura debe ser un número entero positivo.\n");
-			altura = Utiles.pideDatoEntero("Altura: ");
-			e.setAltura(altura);
-		}
-		
-		String colorFlor = Utiles.pideDatoCadena("Color de flor: ");
-		e.setColorFlor(colorFlor);
-		
-		try {
-		Integer vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana: ");
-		e.setVecesRiegoSemana(vecesRiegoSemana);}
-		catch (Exception ex) {
-			System.out.println("Las veces de riego deben ser un número entero positivo.\n");
-			Integer vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana: ");
-			e.setVecesRiegoSemana(vecesRiegoSemana);
-			}
-		
-		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
-		e.setEpoca(epoca);
-		return e;
-
+		arbusto.setCodigo(Utiles.pideDatoCadena("Código: "));
+		arbusto.setTipoHoja(Utiles.pideDatoTpHoja());
+		arbusto.setAltura(Utiles.pideDatoEntero("Altura: "));
+		arbusto.setColorFlor(Utiles.pideDatoCadena("Color de flor: "));
+		arbusto.setVecesRiegoSemana(Utiles.pideDatoEntero("Veces de riego a la semana: "));
+		arbusto.setEpoca(Utiles.pideDatoTpEpo());		
+		return arbusto;
 	}
 
-	public static Arbol modificarArbol(Arbol e) {
-		// tring codigo,TpHoja tipoHoja, Integer altura, String fruta, Integer diamBase,
-		// TpEpo epoca
-		String codigo;
-		TpHoja hoja;
-		Integer altura;
-		TpEpo epoca;
+	public static Arbol modificarArbol(Arbol arbol) {
 
-		codigo = Utiles.pideDatoCadena("Código: ");
-		e.setCodigo(codigo);
-		
-		hoja = Utiles.parseStrTpHoja("Tipo de hoja (PERENNE/CADUCA/OTRO): ");
-		e.setTipoHoja(hoja);
-		
-		try {
-			altura = Utiles.pideDatoEntero("Altura: ");
-			e.setAltura(altura);
-		} catch (Exception ex) {
-			System.out.println("La altura debe ser un número entero positivo.\n");
-			altura = Utiles.pideDatoEntero("Altura: ");
-			e.setAltura(altura);
-		}
-		
-		String fruta = Utiles.pideDatoCadena("Fruta: ");
-		e.setFruta(fruta);
-		
-		try {
-		Integer diametroBase = Utiles.pideDatoEntero("Diametro de la base: ");
-		e.setDiamBase(diametroBase);}
-		catch (Exception ex) {
-						System.out.println("El diámetro debe ser un número entero positivo.\n");
-						Integer diametroBase = Utiles.pideDatoEntero("Diametro de la base: ");
-						e.setDiamBase(diametroBase);}
-		
-		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
-		e.setEpoca(epoca);
-		return e;
+		arbol.setCodigo(Utiles.pideDatoCadena("Código: "));
+		arbol.setTipoHoja(Utiles.pideDatoTpHoja());
+		arbol.setAltura(Utiles.pideDatoEntero("Altura: "));
+		arbol.setFruta(Utiles.pideDatoCadena("Fruta: "));
+		arbol.setDiamBase(Utiles.pideDatoEntero("Diametro de la base: "));
+		arbol.setEpoca(Utiles.pideDatoTpEpo());
+		return arbol;
 	}
 
-	public static Abono modificarAbono(Abono e) {
-		// String codigo, Integer pesoMaximo, String proveedor, String
-		// componentes,TpAbono tipoAbono,TpEpo epoca
-		String codigo;
-		TpEpo epoca;
-		Integer pesoMaximo;
-		String proveedor;
+	public static Abono modificarAbono(Abono abono) {
 
-		codigo = Utiles.pideDatoCadena("Código: ");
-		e.setCodigo(codigo);
-		
-		try {
-		pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-		e.setPesoMaximo(pesoMaximo);}
-		catch (Exception ex) {
-			System.out.println("El peso máximo debe ser un número entero positivo.\n");
-			pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-			e.setPesoMaximo(pesoMaximo);}
-		
-		
-		proveedor = Utiles.pideDatoCadena("Proveedor: ");
-		e.setProveedor(proveedor);
-		
-		String componentes = Utiles.pideDatoCadena("Componentes: ");
-		e.setComponentes(componentes);
-		
-		TpAbono abono = Utiles.parseStrTpAbono("Tipo de abono (NATURAL/ARTIFICIAL/MIXTO): ");
-		e.setTipoAbono(abono);
-		
-		epoca = Utiles.parseStrTpEpo("Época de siembra (INVIERNO/VERANO/ANUAL): ");
-		e.setEpoca(epoca);
-
-		return e;
+		abono.setCodigo(Utiles.pideDatoCadena("Código: "));
+		abono.setPesoMaximo(Utiles.pideDatoEntero("Peso máximo: "));
+		abono.setPesoMaximo(Utiles.pideDatoEntero("Peso máximo: "));
+		abono.setProveedor(Utiles.pideDatoCadena("Proveedor: "));
+		abono.setComponentes(Utiles.pideDatoCadena("Componentes: "));
+		abono.setTipoAbono(Utiles.pideDatoTpAbono());
+		abono.setEpoca(Utiles.pideDatoTpEpo());
+		return abono;
 	}
 
-	public static Maceta modificarMaceta(Maceta e) {
-		// String codigo, Integer pesoMaximo, String proveedor, Integer
-		// capacidad,Integer altura
-		String codigo;
-		Integer altura;
-		Integer pesoMaximo;
-		String proveedor;
+	public static Maceta modificarMaceta(Maceta maceta) {
 
-		codigo = Utiles.pideDatoCadena("Código: ");
-		e.setCodigo(codigo);
-		
-		try {
-			pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-			e.setPesoMaximo(pesoMaximo);}
-			catch (Exception ex) {
-				System.out.println("El peso máximo debe ser un número entero positivo.\n");
-				pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-				e.setPesoMaximo(pesoMaximo);}
-		
-		proveedor = Utiles.pideDatoCadena("Proveedor: ");
-		e.setProveedor(proveedor);
-		
-		try {
-		Integer capacidad = Utiles.pideDatoEntero("Capacidad: ");
-		e.setCapacidad(capacidad);}
-		catch (Exception ex) {
-			System.out.println("La capacidad debe ser un número entero positivo.\n");
-			Integer capacidad = Utiles.pideDatoEntero("Capacidad: ");
-			e.setCapacidad(capacidad);}
-		
-		try {
-			altura = Utiles.pideDatoEntero("Altura: ");
-			e.setAltura(altura);}
-			catch(Exception ex) {System.out.println("La altura debe ser un número entero positivo.\n");
-			altura = Utiles.pideDatoEntero("Altura: ");
-			e.setAltura(altura);};
-
-		return e;
+		maceta.setCodigo(Utiles.pideDatoCadena("Código: "));
+		maceta.setPesoMaximo(Utiles.pideDatoEntero("Peso máximo: "));
+		maceta.setProveedor(Utiles.pideDatoCadena("Proveedor: "));
+		maceta.setCapacidad(Utiles.pideDatoEntero("Capacidad: "));
+		maceta.setAltura(Utiles.pideDatoEntero("Altura: "));
+		return maceta;
 	}
-
 }
