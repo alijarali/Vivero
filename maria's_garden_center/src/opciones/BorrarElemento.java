@@ -9,6 +9,7 @@ import otros.Utiles;
  * 
  * @author Alicia
  * @version 1.1 - Mejoro el menú para que no admita valores erróneos
+ * @version 1.2 - Usa el método compruebaOpcionIncorrecta
  *
  */
 public class BorrarElemento {
@@ -21,18 +22,12 @@ public class BorrarElemento {
 		} else {
 
 			Integer elemento = -1;
-			boolean incorrectoNumero = true;
-			while (incorrectoNumero) {
+			do{
 
-				System.out.println("");
 				Listar.listar();
 				elemento = Utiles.pideDatoEntero("¿Qué elemento desea borrar?:");
-				incorrectoNumero = !(elemento > 0 && elemento <= tamLista);
-				
-				if (incorrectoNumero) {
-					System.out.println("\n\nIntroduzca un número perteneciente a la lista");
-				}
-			}
+			
+			}while(Utiles.compruebaOpcionIncorrecta(elemento, 1, tamLista));
 			
 			boolean incorrectoSiNo = true;
 			while (incorrectoSiNo) {
