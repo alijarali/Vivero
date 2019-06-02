@@ -1,8 +1,17 @@
 package otros;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import otros.Informacion.TpEpo;
 import tipos.TpAbono;
@@ -22,20 +31,6 @@ public class Utiles {
 		System.out.print(pregunta);
 		try {
 			respuesta = teclado.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			// e.printStackTrace();
-		}
-		return respuesta;
-	}
-
-	public static String pideDatoCadenaMinusculas(String pregunta) {
-		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
-		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
-		System.out.print(pregunta);
-		try {
-			respuesta = teclado.readLine().toLowerCase();
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
@@ -77,27 +72,7 @@ public class Utiles {
 		
 		return respuesta;
 	}
-
-	/**
-	 * Este método sirve para pedir datos por pantalla de tipo numero decimal
-	 * 
-	 * @param pregunta
-	 * @return
-	 */
-	public static Double pideDatoDecimal(String pregunta) { // en este estamps devolviendo un numero decimal por lo que
-															// la respuesta la cambiamos
-		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
-		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
-		System.out.print(pregunta);
-		try {
-			respuesta = teclado.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			// e.printStackTrace();
-		}
-		return Double.parseDouble(respuesta); // cambiamos la respuesta para que nos devuelva un double
-	}	
-
+	
 	public static TpHoja pideDatoTpHoja() {
 		int opcion = 0;
 		TpHoja tipo = null;
@@ -186,7 +161,97 @@ public class Utiles {
 	}
 	
 	
+	/**
+	 * Escribe un mensaje en el archivo log.txt
+	 * @param mensaje - El mensaje a escribir en log.txt
+	 */
+	public static void escribeLog(String mensaje) {
+		String mensajeCompleto;
+		Date date = new Date();
+		File archivo = new File("./log.txt");
+		BufferedWriter bw;
+				
+		DateFormat fechaHora = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+		mensajeCompleto = "<"+fechaHora.format(date)+">\n";
+		mensajeCompleto = mensajeCompleto.concat(mensaje+"\n\n");
+		
+		//Si el archivo existe, apunta a él. Si no existe, lo crea y apunta a él
+		try {
+			bw = new BufferedWriter(new FileWriter(archivo, true));
+			bw.write(mensajeCompleto);
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+	}
+	
+	/**
+	 * Borra por completo el archivo log.txt
+	 */
+	public static void borraLog() {
+		File archivo = new File("./log.txt");
+		BufferedWriter bw;
+				
+		//Si el archivo existe, apunta a él. Si no existe, lo crea y apunta a él
+		try {
+			bw = new BufferedWriter(new FileWriter(archivo));
+			bw.write("");
+			bw.close();
+			System.out.println("\nSe ha borrado el archivo log.txt");
+			enterParaContinuar();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	/**
+	 * Muestra por pantalla el archivo log.txt
+	 */
+	public static void muestraLog(){
+		File archivo = new File("./log.txt");
+		String cadena;
+		String mensajeCompleto = "\n";
+		FileReader f;
+		
+		try {
+			
+			f = new FileReader(archivo);
+			BufferedReader b = new BufferedReader(f);
+			while((cadena = b.readLine())!=null) {
+			   mensajeCompleto = mensajeCompleto.concat(cadena+"\n");
+			}			
+			b.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(mensajeCompleto);
+		enterParaContinuar();
+	}
+	
+	/**
+	 * Sirve para pausar lo que se muestra por pantalla
+	 */
+	public static void enterParaContinuar() {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Presione Enter para continuar.");
+		try {
+			teclado.readLine();
+		} catch (Exception e) {
+			//TODO Gestionar excepciones
+		}
+	}
 }
+
+
 
 
 /* - - - - - - - Métodos no usados - - - - - - - */

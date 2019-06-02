@@ -32,7 +32,7 @@ public class BorrarElemento {
 			boolean incorrectoSiNo = true;
 			while (incorrectoSiNo) {
 				
-				String seguro = Utiles.pideDatoCadenaMinusculas("¿Está seguro? S/N ");
+				String seguro = Utiles.pideDatoCadena("¿Está seguro? S/N ");
 				switch (seguro.toLowerCase()) {
 				case "s":
 					start.App.lstProductos.remove((elemento - 1));

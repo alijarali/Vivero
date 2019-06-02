@@ -20,16 +20,19 @@ public class App {
 	 * @version 1.2 - Usa la funcion compruebaOpcionIncorrecta para 
 	 * comprobar si la opcion introducida por el usuario es correcta. 
 	 * Pide que pulses enter cuando escoges listar.
+	 * @version 1.3 - Se añaden las funciones de Log
 	 */
 	public static void main(String[] args) {
-
+		
+		Utiles.escribeLog("El usuario inicia el programa.");
+		
 		int opcion = 0;
 		do {
 			mostrarMenu();
 			do {
 			opcion = otros.Utiles.pideDatoEntero("Opción: ");
 			ejecutarOpcion(opcion);
-			}while(Utiles.compruebaOpcionIncorrecta(opcion, 0, 5));
+			}while(Utiles.compruebaOpcionIncorrecta(opcion, 0, 7));
 
 		} while (opcion != 0);
 		String respuesta = "";
@@ -37,6 +40,8 @@ public class App {
 		respuesta = respuesta.concat("\nSe cierra el programa");
 		respuesta = respuesta.concat("\n- - - - - - - - - - - - ");
 		System.out.println(respuesta);
+		
+		Utiles.escribeLog("El usuario cierra el programa.");
 	}
 
 	private static void ejecutarOpcion(int opcion) {
@@ -55,11 +60,13 @@ public class App {
 			break;
 		case 5:
 			opciones.Listar.listar();
-			System.out.println("Presione Enter para continuar.");
-			try {
-				System.in.read();
-			} catch (Exception e) {
-			}
+			Utiles.enterParaContinuar();
+			break;
+		case 6:
+			Utiles.muestraLog();
+			break;
+		case 7:
+			Utiles.borraLog();
 			break;
 		}
 	}
@@ -76,7 +83,9 @@ public class App {
 		menu = menu.concat("3. Modificar elemento\n");
 		menu = menu.concat("4. Cargar Lista\n");
 		menu = menu.concat("5. Listar\n");
-		menu = menu.concat("-------\n");
+		menu = menu.concat("----------------------\n");
+		menu = menu.concat("6. Ver Log\n");
+		menu = menu.concat("7. Borrar Log\n");
 		menu = menu.concat("0. Salir");
 		
 		System.out.println(menu);
