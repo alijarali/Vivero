@@ -48,12 +48,15 @@ public class App {
 		switch (opcion) {
 		case 1:
 			opciones.AniadirElemento.aniadirElemento();
+			Utiles.enterParaContinuar();
 			break;
 		case 2:
 			opciones.BorrarElemento.borrarElemento();
+			Utiles.enterParaContinuar();
 			break;
 		case 3:
 			opciones.ModificarElemento.modificarElemento();
+			Utiles.enterParaContinuar();
 			break;
 		case 4:
 			opciones.CargarLista.cargarLista();

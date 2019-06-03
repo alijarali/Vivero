@@ -37,6 +37,32 @@ public class Utiles {
 		}
 		return respuesta;
 	}
+	
+	/**
+	 * Este método sirve para pedir datos por pantalla de tipo cadena de caracteres
+	 * y comprueba que no haya dígitos en esa cadena
+	 * 
+	 * @param pregunta
+	 * @return
+	 */
+	public static String pideDatoCadenaNoNumerica(String pregunta) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+		}
+		
+		//Comprueba con una regexp que no haya ningun digito en la cadena introducida por el usuario
+		if (respuesta.matches(".*\\d.*")) {
+			System.out.println("\nERROR: No puede introducir ningún dígito.");
+			respuesta = pideDatoCadenaNoNumerica(pregunta);
+		}
+		return respuesta;
+	}
 
 	/**
 	 * Este método sirve para pedir datos por pantalla de tipo numero entero
@@ -307,7 +333,7 @@ public static TpEpo parseStrTpEpo(String pregunta) {
  * @param pregunta
  * @return
  */
-/**
+/*
 public static TpHoja parseStrTpHoja(String pregunta) {
 	BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
 	String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia

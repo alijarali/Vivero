@@ -59,14 +59,15 @@ public class AniadirElemento {
 
 		codigo = Utiles.pideDatoCadena("Código: ");
 		pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-		proveedor = Utiles.pideDatoCadena("Proveedor: ");
-		componentes = Utiles.pideDatoCadena("Componentes: ");
+		proveedor = Utiles.pideDatoCadenaNoNumerica("Proveedor: ");
+		componentes = Utiles.pideDatoCadenaNoNumerica("Componentes: ");
 		abono = Utiles.pideDatoTpAbono();
 		epoca = Utiles.pideDatoTpEpo();
 
 		Abono a = new Abono(codigo, pesoMaximo, proveedor, componentes, abono, epoca);
 		start.App.lstProductos.add(a);
-		System.out.println("Hemos añadido " + a.toString());
+		System.out.println("\nSe ha añadido " + a.toString());
+		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
 	}
 
 	/**
@@ -85,13 +86,14 @@ public class AniadirElemento {
 		codigo = Utiles.pideDatoCadena("Código: ");
 		hoja = Utiles.pideDatoTpHoja();
 		altura = Utiles.pideDatoEntero("Altura: ");
-		fruta = Utiles.pideDatoCadena("Fruta: ");
+		fruta = Utiles.pideDatoCadenaNoNumerica("Fruta: ");
 		diametroBase = Utiles.pideDatoEntero("Diametro de la base: ");
 		epoca = Utiles.pideDatoTpEpo();
 
 		Arbol a = new Arbol(codigo, hoja, altura, fruta, diametroBase, epoca);
 		start.App.lstProductos.add(a);
-		System.out.println("Hemos añadido " + a.toString());
+		System.out.println("\nSe ha añadido " + a.toString());
+		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
 	}
 
 	/**
@@ -110,13 +112,14 @@ public class AniadirElemento {
 		codigo = Utiles.pideDatoCadena("Código: ");
 		hoja = Utiles.pideDatoTpHoja();
 		altura = Utiles.pideDatoEntero("Altura: ");
-		colorFlor = Utiles.pideDatoCadena("Color de flor: ");
+		colorFlor = Utiles.pideDatoCadenaNoNumerica("Color de flor: ");
 		vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana: ");
 		epoca = Utiles.pideDatoTpEpo();
 
 		Arbusto a = new Arbusto(codigo, hoja, altura, colorFlor, vecesRiegoSemana, epoca);
 		start.App.lstProductos.add(a);
-		System.out.println("Hemos añadido " + a.toString());
+		System.out.println("\nSe ha añadido " + a.toString());
+		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
 
 	}
 
@@ -134,13 +137,14 @@ public class AniadirElemento {
 
 		codigo = Utiles.pideDatoCadena("Código: ");
 		pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-		proveedor = Utiles.pideDatoCadena("Proveedor: ");
+		proveedor = Utiles.pideDatoCadenaNoNumerica("Proveedor: ");
 		capacidad = Utiles.pideDatoEntero("Capacidad: ");
 		altura = Utiles.pideDatoEntero("Altura: ");
 
 		Maceta a = new Maceta(codigo, pesoMaximo, proveedor, capacidad, altura);
 		start.App.lstProductos.add(a);
-		System.out.println("Hemos añadido " + a.toString());
+		System.out.println("\nSe ha añadido " + a.toString());
+		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
 	}
 
 }

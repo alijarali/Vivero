@@ -1,5 +1,6 @@
 package opciones;
 
+import otros.Producto;
 import otros.Utiles;
 
 /**
@@ -31,18 +32,22 @@ public class BorrarElemento {
 			
 			boolean incorrectoSiNo = true;
 			while (incorrectoSiNo) {
+				String copia = start.App.lstProductos.get((elemento - 1)).toString();
 				
 				String seguro = Utiles.pideDatoCadena("¿Está seguro? S/N ");
 				switch (seguro.toLowerCase()) {
 				case "s":
+					
 					start.App.lstProductos.remove((elemento - 1));
 					System.out.println("Se ha borrado el producto de la lista. \n");
+					Utiles.escribeLog("El usuario elimina el elemento "+(elemento)+":\n\t"+copia);					
 					incorrectoSiNo = false;
 					break;
 
 				case "n":
-					System.out.println("Volver al menú principal");
+					System.out.println("No se ha eliminado el producto seleccionado");
 					incorrectoSiNo = false;
+					Utiles.escribeLog("El usuario NO elimina el elemento "+(elemento)+":\n\t"+copia);
 					break;
 
 				default:
