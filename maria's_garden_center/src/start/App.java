@@ -3,28 +3,20 @@ package start;
 import java.util.ArrayList;
 import java.util.List;
 
+import otros.Log;
 import otros.Producto;
 import otros.Utiles;
 
+/**
+ * Es la clase principal, la que contiene el main.
+ */
 public class App {
 
 	public static List<Producto> lstProductos = new ArrayList<>();
 
-	/**
-	 * El main nos mostrará el menú
-	 * 
-	 * @param args
-	 * @author Alicia
-	 * @version 1.1 - Corrijo la forma de imprimir el menu y 
-	 * aniado una sentencia que avisa que se cierra el programa
-	 * @version 1.2 - Usa la funcion compruebaOpcionIncorrecta para 
-	 * comprobar si la opcion introducida por el usuario es correcta. 
-	 * Pide que pulses enter cuando escoges listar.
-	 * @version 1.3 - Se añaden las funciones de Log
-	 */
 	public static void main(String[] args) {
 		
-		Utiles.escribeLog("El usuario inicia el programa.");
+		Log.escribeLog("El usuario inicia el programa.");
 		
 		int opcion = 0;
 		do {
@@ -41,20 +33,23 @@ public class App {
 		respuesta = respuesta.concat("\n- - - - - - - - - - - - ");
 		System.out.println(respuesta);
 		
-		Utiles.escribeLog("El usuario cierra el programa.");
+		Log.escribeLog("El usuario cierra el programa.");
 	}
 
 	private static void ejecutarOpcion(int opcion) {
 		switch (opcion) {
 		case 1:
+			Log.escribeLog("El usuario entra en Añadir Elemento");
 			opciones.AniadirElemento.aniadirElemento();
 			Utiles.enterParaContinuar();
 			break;
 		case 2:
+			Log.escribeLog("El usuario entra en Borrar Elemento");
 			opciones.BorrarElemento.borrarElemento();
 			Utiles.enterParaContinuar();
 			break;
 		case 3:
+			Log.escribeLog("El usuario entra en Modificar Elemento");
 			opciones.ModificarElemento.modificarElemento();
 			Utiles.enterParaContinuar();
 			break;
@@ -62,14 +57,18 @@ public class App {
 			opciones.CargarLista.cargarLista();
 			break;
 		case 5:
+			Log.escribeLog("El usuario entra en Listar");
 			opciones.Listar.listar();
 			Utiles.enterParaContinuar();
 			break;
 		case 6:
-			Utiles.muestraLog();
+			Log.escribeLog("El usuario entra en Muestra Log");
+			Log.muestraLog();
+			Utiles.enterParaContinuar();
 			break;
 		case 7:
-			Utiles.borraLog();
+			Log.borraLog();
+			Utiles.enterParaContinuar();
 			break;
 		}
 	}

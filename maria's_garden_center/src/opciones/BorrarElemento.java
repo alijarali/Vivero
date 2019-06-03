@@ -1,17 +1,13 @@
 package opciones;
 
+import otros.Log;
 import otros.Producto;
 import otros.Utiles;
 
 /**
- * Esta clase borra elementos de la lista. Si la lista está vacía nos enseña y
- * mensaje y vuelve al menñu principal.Si no, nos enseñará un listado con sus
- * indices a partir de ahí elegimos cual eliminar
- * 
- * @author Alicia
- * @version 1.1 - Mejoro el menú para que no admita valores erróneos
- * @version 1.2 - Usa el método compruebaOpcionIncorrecta
- *
+ * Esta clase borra elementos de la lista. En el caso de que la lista esté vacía
+ * nos lo comunica y vuelve al menú principal. Si no, nos enseñará la lista para 
+ * que el usuario pueda escoger el elemento a borrar.
  */
 public class BorrarElemento {
 
@@ -20,6 +16,7 @@ public class BorrarElemento {
 		Integer tamLista = start.App.lstProductos.size();
 		if (tamLista == 0) {
 			System.out.println("\n\nLista vacía.\nPuede añadir productos mediante la opción 'Añadir elemento' o cargar el catálogo con la opción 'Cargar lista' ");
+			Log.escribeLog("Borrar Elemento --> La lista está vacía");
 		} else {
 
 			Integer elemento = -1;
@@ -40,14 +37,14 @@ public class BorrarElemento {
 					
 					start.App.lstProductos.remove((elemento - 1));
 					System.out.println("Se ha borrado el producto de la lista. \n");
-					Utiles.escribeLog("El usuario elimina el elemento "+(elemento)+":\n\t"+copia);					
+					Log.escribeLog("El usuario elimina el elemento "+(elemento)+":\n\t"+copia);					
 					incorrectoSiNo = false;
 					break;
 
 				case "n":
 					System.out.println("No se ha eliminado el producto seleccionado");
 					incorrectoSiNo = false;
-					Utiles.escribeLog("El usuario NO elimina el elemento "+(elemento)+":\n\t"+copia);
+					Log.escribeLog("El usuario NO elimina el elemento "+(elemento)+":\n\t"+copia);
 					break;
 
 				default:

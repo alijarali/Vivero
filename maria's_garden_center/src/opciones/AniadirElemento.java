@@ -4,21 +4,18 @@ import otros.Utiles;
 import complementos.Abono;
 import complementos.Maceta;
 import otros.Informacion.TpEpo;
+import otros.Log;
 import plantas.Arbol;
 import plantas.Arbusto;
 import tipos.TpAbono;
 import tipos.TpHoja;
 
 /**
- * añadimos elementos a la lista
- * 
- * @author Alicia
- * @version 1.1 - Modifico la forma de pedir el tipo de elemento a introducir
+ * Clase con los métodos necesarios para añadir elementos a la lista.
  */
 public class AniadirElemento {
 	/**
-	 * este método nos pide el tipo del producto que queremos meter y lo asocia a un
-	 * método para cada tipo
+	 * Este método nos pide el tipo del producto que queremos añadir y lo añade a la lista.
 	 */
 	public static void aniadirElemento() {
 		int opcion = 0;
@@ -29,15 +26,19 @@ public class AniadirElemento {
 
 			switch (opcion) {
 			case 1:
+				Log.escribeLog("El usuario va a añadir un Arbusto");
 				aniadirArbusto();
 				break;
 			case 2:
+				Log.escribeLog("El usuario va a añadir un Árbol");
 				aniadirArbol();
 				break;
 			case 3:
+				Log.escribeLog("El usuario va a añadir un Abono");
 				aniadirAbono();
 				break;
 			case 4:
+				Log.escribeLog("El usuario va a añadir una Maceta");
 				aniadirMaceta();
 				break;
 			}
@@ -45,9 +46,7 @@ public class AniadirElemento {
 	}
 
 	/**
-	 * Este método crea un objeto de tipo abono y lo añade a la lista lstProductos
-	 * 
-	 * @author Alicia
+	 * Este método crea un objeto de tipo abono y lo añade a la lista.
 	 */
 	public static void aniadirAbono() {
 		Integer pesoMaximo;
@@ -67,13 +66,11 @@ public class AniadirElemento {
 		Abono a = new Abono(codigo, pesoMaximo, proveedor, componentes, abono, epoca);
 		start.App.lstProductos.add(a);
 		System.out.println("\nSe ha añadido " + a.toString());
-		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
+		Log.escribeLog("El usuario añade:\n\t"+a.toString());
 	}
 
 	/**
-	 * Este método crea un objeto de tipo arbol y lo añade a la lista lstProductos
-	 * 
-	 * @author Alicia
+	 * Este método crea un objeto de tipo arbol y lo añade a la lista.
 	 */
 	public static void aniadirArbol() {
 		String codigo;
@@ -93,13 +90,11 @@ public class AniadirElemento {
 		Arbol a = new Arbol(codigo, hoja, altura, fruta, diametroBase, epoca);
 		start.App.lstProductos.add(a);
 		System.out.println("\nSe ha añadido " + a.toString());
-		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
+		Log.escribeLog("El usuario añade:\n\t"+a.toString());
 	}
 
 	/**
-	 * Este método crea un objeto de tipo arbusto y lo añade a la lista lstProductos
-	 * 
-	 * @author Alicia
+	 * Este método crea un objeto de tipo arbusto y lo añade a la lista.
 	 */
 	public static void aniadirArbusto() {
 		String codigo;
@@ -119,14 +114,12 @@ public class AniadirElemento {
 		Arbusto a = new Arbusto(codigo, hoja, altura, colorFlor, vecesRiegoSemana, epoca);
 		start.App.lstProductos.add(a);
 		System.out.println("\nSe ha añadido " + a.toString());
-		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
+		Log.escribeLog("El usuario añade:\n\t"+a.toString());
 
 	}
 
 	/**
-	 * Este método crea un objeto de tipo maceta y lo añade a la lista lstProductos
-	 * 
-	 * @author Alicia
+	 * Este método crea un objeto de tipo maceta y lo añade a la lista.
 	 */
 	public static void aniadirMaceta() {
 		String codigo;
@@ -144,7 +137,7 @@ public class AniadirElemento {
 		Maceta a = new Maceta(codigo, pesoMaximo, proveedor, capacidad, altura);
 		start.App.lstProductos.add(a);
 		System.out.println("\nSe ha añadido " + a.toString());
-		Utiles.escribeLog("El usuario añade:\n\t"+a.toString());
+		Log.escribeLog("El usuario añade:\n\t"+a.toString());
 	}
 
 }

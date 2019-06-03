@@ -1,16 +1,8 @@
 package complementos;
 
-/**
- * Clase para la información de las macetas.
- * 
- * 
- * @author Pedro
- * @version 1.0
- */
 public class Maceta extends Complemento {
 	private Integer capacidad;
 	private Integer altura;	
-	
 	
 	public Maceta() {
 		super();
@@ -20,7 +12,6 @@ public class Maceta extends Complemento {
 		this.capacidad = capacidad;
 		this.altura = altura;
 	}
-	
 	
 	public Integer getCapacidad() {
 		return capacidad;
@@ -41,10 +32,4 @@ public class Maceta extends Complemento {
 		return "Maceta ["+" Código: " + getCodigo() + ", Peso Máximo: " + getPesoMaximo()+
 				", Proveedor: " + getProveedor()+", Capacidad: " + capacidad + ", Altura: " + altura +  "]";
 	}
-	
-	
-	
-	
-	
-	
 }

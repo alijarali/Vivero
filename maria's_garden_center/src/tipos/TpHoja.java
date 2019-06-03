@@ -1,12 +1,11 @@
 package tipos;
 
+/**
+ * Enumerador que indica el tipo de hoja:
+ * 	- Caduca.
+ * 	- Perenne.
+ * 	- Otro.
+ */
 public enum TpHoja {
-	/**
-	 * Enumerador que indica el tipo de hoja:
-	 * 	- Caduca.
-	 * 	- Perenne.
-	 * 	- Otro.
-	 */
 	CADUCA, PERENNE, OTRO;
-
 }

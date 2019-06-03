@@ -1,12 +1,12 @@
 package tipos;
 /**
- * 
- * @author Alicia
- *enumeración de tipos de abono
+ * Enumeración de tipos de abono:
+ *  - Natural.
+ *  - Artificial.
+ *  - Mixto.
  */
 public enum TpAbono {
 	NATURAL, ARTIFICIAL, MIXTO;
-
 	}
 	
 

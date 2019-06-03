@@ -7,6 +7,7 @@ import comparadores.ComparaTipo;
 import complementos.Abono;
 import complementos.Complemento;
 import complementos.Maceta;
+import otros.Log;
 import otros.Producto;
 import plantas.Arbol;
 import plantas.Arbusto;
@@ -14,10 +15,7 @@ import plantas.Planta;
 
 public class Listar {
 	/**
-	 * Este método muestra la lista de productos ordenados por su Tipo.
-	 * 
-	 * @version 1.1 - Hago que se imprima una sola
-	 *          cadena, en lugar de llamar al syso una vez por cada elemento.
+	 * Este método muestra la lista de productos ordenados por el comparador ComparaTipo
 	 */
 	public static void listar() {
 		Integer indice = 0;
@@ -87,9 +85,11 @@ public class Listar {
 				respuesta = respuesta.concat("\n");
 			}
 			System.out.println(respuesta);
+			Log.escribeLog("El resultado de mostrar la lista fue:\n"+respuesta);
 		} else {
 			System.out.println("\nNo hay elementos en la lista.\nPuedes añadirlos mediante la opción "
 					+ "'añadir elemento' o cargar el catálogo con la opción 'cargar lista'.");
+			Log.escribeLog("Listar --> La lista está vacía");
 		}
 	}
 }

@@ -8,6 +8,15 @@ import otros.Producto;
 import plantas.Arbol;
 import plantas.Arbusto;
 
+/**
+ * Comparador. Ordena la lista por Tipo. La prioridad es:
+ *  - 1. Arbol
+ *  - 2. Arbusto
+ *  - 3. Abono
+ *  - 4. Maceta
+ *  
+ * En el caso de que sean del mismo tipo, se ordena por código(alfabéticamente).
+ */
 public class ComparaTipo implements Comparator<Producto>{
 	
 	@Override
@@ -27,7 +36,6 @@ public class ComparaTipo implements Comparator<Producto>{
 		if(p2 instanceof Maceta) valorP2=4;
 		
 		res = valorP1 - valorP2;
-		
 		res = (res==0) ? p1.getCodigo().compareTo(p2.getCodigo()) : res;
 		
 		return res;

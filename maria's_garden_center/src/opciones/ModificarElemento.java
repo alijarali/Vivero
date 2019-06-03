@@ -3,7 +3,7 @@ package opciones;
 import otros.Utiles;
 import complementos.Abono;
 import complementos.Maceta;
-
+import otros.Log;
 import otros.Producto;
 import plantas.Arbol;
 import plantas.Arbusto;
@@ -63,7 +63,7 @@ public class ModificarElemento {
 		arbusto.setEpoca(Utiles.pideDatoTpEpo());
 		
 		System.out.println("Ha modificado el elemento "+indice+":\n\t"+copia+"\n\t--> "+arbusto.toString());
-		Utiles.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+arbusto.toString());
+		Log.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+arbusto.toString());
 		
 		return arbusto;
 	}
@@ -80,7 +80,7 @@ public class ModificarElemento {
 		arbol.setEpoca(Utiles.pideDatoTpEpo());
 		
 		System.out.println("Ha modificado el elemento "+indice+":\n\t"+copia+"\n\t--> "+arbol.toString());
-		Utiles.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+arbol.toString());
+		Log.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+arbol.toString());
 		
 		return arbol;
 	}
@@ -98,7 +98,7 @@ public class ModificarElemento {
 		abono.setEpoca(Utiles.pideDatoTpEpo());
 		
 		System.out.println("Ha modificado el elemento "+indice+":\n\t"+copia+"\n\t--> "+abono.toString());
-		Utiles.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+abono.toString());
+		Log.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+abono.toString());
 		
 		return abono;
 	}
@@ -114,7 +114,7 @@ public class ModificarElemento {
 		maceta.setAltura(Utiles.pideDatoEntero("Altura: "));
 		
 		System.out.println("Ha modificado el elemento "+indice+":\n\t"+copia+"\n\t--> "+maceta.toString());
-		Utiles.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+maceta.toString());
+		Log.escribeLog("El usuario modifica el elemento "+indice+":\n\t"+copia+"\n\t--> "+maceta.toString());
 		
 		return maceta;
 	}

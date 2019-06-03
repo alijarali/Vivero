@@ -1,51 +1,35 @@
 package otros;
 
 /**
- * @author Alicia
- * Esta es la clase principal, de aquí diferenciaremos el resto de productos
+ * Clase principal de la que heredan las clases: 
+ * - Planta: 
+ *  * Árbol. 
+ *  * Arbusto. 
+ * - Complemento: 
+ *  * Abono. 
+ *  * Maceta.
  */
 public class Producto {
-private String codigo;
+	private String codigo;
 
-
-public Producto() {
-	;
-}
-
-/**
- * Constructor de Producto
- */
-public Producto(String codigo) {
-				this.codigo = codigo;
+	public Producto() {
 	}
 
-/**
- * Método Get del código del producto
- * @return
- */
-public String getCodigo() {
-	return codigo;
-}
+	public Producto(String codigo) {
+		this.codigo = codigo;
+	}
 
-/**
- * Método Set del código del producto
- * @param codigo
- */
-public void setCodigo(String codigo) {
-	this.codigo = codigo;
-}
+	public String getCodigo() {
+		return codigo;
+	}
 
-/**
- * toString, nos enseña por pantalla de manera "bonita" los atributos del producto.
- */
-@Override
-public String toString() {
-	return "Producto [Código=" + codigo + "]";
-}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 
-
-
-
-
+	@Override
+	public String toString() {
+		return "Producto [Código=" + codigo + "]";
+	}
 
 }
