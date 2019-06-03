@@ -81,14 +81,19 @@ public class App {
 		menu = menu.concat("***************************************\n");
 		menu = menu.concat("MENÚ PRINCIPAL\n");
 		menu = menu.concat("===============\n");
-		menu = menu.concat("1. Añadir elemento\n");
-		menu = menu.concat("2. Borrar elemento\n");
-		menu = menu.concat("3. Modificar elemento\n");
-		menu = menu.concat("4. Cargar Lista\n");
-		menu = menu.concat("5. Listar\n");
-		menu = menu.concat("----------------------\n");
-		menu = menu.concat("6. Ver Log\n");
-		menu = menu.concat("7. Borrar Log\n");
+		menu = menu.concat("1.  Añadir elemento\n");
+		menu = menu.concat("2.  Borrar elemento\n");
+		menu = menu.concat("3.  Modificar elemento\n");
+		menu = menu.concat("4.  Cargar Lista\n");
+		menu = menu.concat("5.  Listar\n");
+		menu = menu.concat("--------- LOG ---------\n");
+		menu = menu.concat("6.  Ver Log\n");
+		menu = menu.concat("7.  Borrar Log\n");
+		menu = menu.concat("--------- BBDD --------\n");
+		menu = menu.concat("8.  Restaurar Datos\n");
+		menu = menu.concat("9.  Sobreescribir Datos\n");
+		menu = menu.concat("10. Borrar Datos\n");
+		menu = menu.concat("-----------------------\n");
 		menu = menu.concat("0. Salir");
 		
 		System.out.println(menu);
