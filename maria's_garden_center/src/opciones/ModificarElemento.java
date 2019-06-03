@@ -3,12 +3,10 @@ package opciones;
 import otros.Utiles;
 import complementos.Abono;
 import complementos.Maceta;
-import otros.Informacion.TpEpo;
+
 import otros.Producto;
 import plantas.Arbol;
 import plantas.Arbusto;
-import tipos.TpAbono;
-import tipos.TpHoja;
 
 public class ModificarElemento {
 	/**
