@@ -11,7 +11,6 @@ import otros.Utiles;
  * Es la clase principal, la que contiene el main.
  */
 public class App {
-
 	public static List<Producto> lstProductos = new ArrayList<>();
 
 	public static void main(String[] args) {
@@ -75,9 +74,6 @@ public class App {
 
 	private static void mostrarMenu() {
 		String menu = "";
-		menu = menu.concat("\n***************************************\n");
-		menu = menu.concat("* BIENVENIDOS A MARIA'S GARDEN CENTER *\n");
-		menu = menu.concat("***************************************\n");
 		menu = menu.concat("MENÚ PRINCIPAL\n");
 		menu = menu.concat("===============\n");
 		menu = menu.concat("1.  Añadir elemento\n");

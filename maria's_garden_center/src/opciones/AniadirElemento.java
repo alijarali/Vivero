@@ -13,7 +13,8 @@ import tipos.TpHoja;
 /**
  * Clase con los métodos necesarios para añadir elementos a la lista.
  */
-public class AniadirElemento {
+public class AniadirElemento {	
+	
 	/**
 	 * Este método nos pide el tipo del producto que queremos añadir y lo añade a la lista.
 	 */
@@ -56,10 +57,10 @@ public class AniadirElemento {
 		TpAbono abono;
 		TpEpo epoca;
 
-		codigo = Utiles.pideDatoCadena("Código: ");
-		pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-		proveedor = Utiles.pideDatoCadenaNoNumerica("Proveedor: ");
-		componentes = Utiles.pideDatoCadenaNoNumerica("Componentes: ");
+		codigo = Utiles.pideDatoCadena("Código [Max. "+Utiles.MAX_CHAR_CODIGO+" caracteres]: ", Utiles.MAX_CHAR_CODIGO);
+		pesoMaximo = Utiles.pideDatoEntero("Peso máximo [Max. "+Utiles.MAX_CHAR_PESO+" caracteres]: ", Utiles.MAX_CHAR_PESO);
+		proveedor = Utiles.pideDatoCadenaNoNumerica("Proveedor [Max. "+Utiles.MAX_CHAR_PROVEEDOR+" caracteres]: ", Utiles.MAX_CHAR_PROVEEDOR);
+		componentes = Utiles.pideDatoCadenaNoNumerica("Componentes [Max. "+Utiles.MAX_CHAR_COMPONENTES+" caracteres]: ", Utiles.MAX_CHAR_COMPONENTES);
 		abono = Utiles.pideDatoTpAbono();
 		epoca = Utiles.pideDatoTpEpo();
 
@@ -80,11 +81,11 @@ public class AniadirElemento {
 		TpEpo epoca;
 		TpHoja hoja;
 
-		codigo = Utiles.pideDatoCadena("Código: ");
+		codigo = Utiles.pideDatoCadena("Código [Max. "+Utiles.MAX_CHAR_CODIGO+" caracteres]: ", Utiles.MAX_CHAR_CODIGO);
 		hoja = Utiles.pideDatoTpHoja();
-		altura = Utiles.pideDatoEntero("Altura: ");
-		fruta = Utiles.pideDatoCadenaNoNumerica("Fruta: ");
-		diametroBase = Utiles.pideDatoEntero("Diametro de la base: ");
+		altura = Utiles.pideDatoEntero("Altura [Max. "+Utiles.MAX_CHAR_ALTURA+" caracteres]: ", Utiles.MAX_CHAR_ALTURA);
+		fruta = Utiles.pideDatoCadenaNoNumerica("Fruta [Max. "+Utiles.MAX_CHAR_FRUTA+" caracteres]: ", Utiles.MAX_CHAR_FRUTA);
+		diametroBase = Utiles.pideDatoEntero("Diametro de la base [Max. "+Utiles.MAX_CHAR_DIAM+" caracteres]: ", Utiles.MAX_CHAR_DIAM);
 		epoca = Utiles.pideDatoTpEpo();
 
 		Arbol a = new Arbol(codigo, hoja, altura, fruta, diametroBase, epoca);
@@ -104,11 +105,11 @@ public class AniadirElemento {
 		TpHoja hoja;
 		TpEpo epoca;
 
-		codigo = Utiles.pideDatoCadena("Código: ");
+		codigo = Utiles.pideDatoCadena("Código [Max. "+Utiles.MAX_CHAR_CODIGO+" caracteres]: ", Utiles.MAX_CHAR_CODIGO);
 		hoja = Utiles.pideDatoTpHoja();
-		altura = Utiles.pideDatoEntero("Altura: ");
-		colorFlor = Utiles.pideDatoCadenaNoNumerica("Color de flor: ");
-		vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana: ");
+		altura = Utiles.pideDatoEntero("Altura [Max. "+Utiles.MAX_CHAR_ALTURA+" caracteres]: ", Utiles.MAX_CHAR_ALTURA);
+		colorFlor = Utiles.pideDatoCadenaNoNumerica("Color de flor [Max. "+Utiles.MAX_CHAR_FLOR+" caracteres]: ", Utiles.MAX_CHAR_FLOR);
+		vecesRiegoSemana = Utiles.pideDatoEntero("Veces de riego a la semana [Max. "+Utiles.MAX_CHAR_RIEGO+" caracteres]: ", Utiles.MAX_CHAR_RIEGO);
 		epoca = Utiles.pideDatoTpEpo();
 
 		Arbusto a = new Arbusto(codigo, hoja, altura, colorFlor, vecesRiegoSemana, epoca);
@@ -128,11 +129,11 @@ public class AniadirElemento {
 		Integer pesoMaximo;
 		Integer capacidad;
 
-		codigo = Utiles.pideDatoCadena("Código: ");
-		pesoMaximo = Utiles.pideDatoEntero("Peso máximo: ");
-		proveedor = Utiles.pideDatoCadenaNoNumerica("Proveedor: ");
-		capacidad = Utiles.pideDatoEntero("Capacidad: ");
-		altura = Utiles.pideDatoEntero("Altura: ");
+		codigo = Utiles.pideDatoCadena("Código [Max. "+Utiles.MAX_CHAR_CODIGO+" caracteres]: ", Utiles.MAX_CHAR_CODIGO);
+		pesoMaximo = Utiles.pideDatoEntero("Peso máximo [Max. "+Utiles.MAX_CHAR_PESO+" caracteres]: ", Utiles.MAX_CHAR_PESO);
+		proveedor = Utiles.pideDatoCadenaNoNumerica("Proveedor [Max. "+Utiles.MAX_CHAR_PROVEEDOR+" caracteres]: ", Utiles.MAX_CHAR_PROVEEDOR);
+		capacidad = Utiles.pideDatoEntero("Capacidad [Max. "+Utiles.MAX_CHAR_CAPACIDAD+" caracteres]: ", Utiles.MAX_CHAR_CAPACIDAD);
+		altura = Utiles.pideDatoEntero("Altura [Max. "+Utiles.MAX_CHAR_ALTURA+" caracteres]: ", Utiles.MAX_CHAR_ALTURA);
 
 		Maceta a = new Maceta(codigo, pesoMaximo, proveedor, capacidad, altura);
 		start.App.lstProductos.add(a);

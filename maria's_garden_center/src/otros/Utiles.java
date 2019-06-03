@@ -17,13 +17,28 @@ import otros.Informacion.TpEpo;
 import tipos.TpAbono;
 import tipos.TpHoja;
 
+/**
+ * Clase con una colección de métodos que se usan desde otras clases
+ */
 public class Utiles {
 
+	public final static int MAX_CHAR_CODIGO = 6;//
+	public final static int MAX_CHAR_ALTURA = 6;//
+	//public final static int MAX_CHAR_HOJA = 8;
+	public final static int MAX_CHAR_FLOR = 15;//
+	public final static int MAX_CHAR_RIEGO = 5;//
+	public final static int MAX_CHAR_FRUTA = 15;//
+	public final static int MAX_CHAR_DIAM = 10;//
+	public final static int MAX_CHAR_PESO = 7;//
+	public final static int MAX_CHAR_PROVEEDOR = 20;//
+	//public final static int MAX_CHAR_ABONO = 10;
+	public final static int MAX_CHAR_COMPONENTES = 25;//
+	public final static int MAX_CHAR_CAPACIDAD = 9;//
+	//public final static int MAX_CHAR_EPOCA = 10;
+	
+	
 	/**
 	 * Este método sirve para pedir datos por pantalla de tipo cadena de caracteres
-	 * 
-	 * @param pregunta
-	 * @return
 	 */
 	public static String pideDatoCadena(String pregunta) {
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
@@ -32,8 +47,43 @@ public class Utiles {
 		try {
 			respuesta = teclado.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			// e.printStackTrace();
+			System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
+			Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
+			respuesta = pideDatoCadena(pregunta);
+		}
+		
+		if(respuesta.length() == 0) {
+			System.out.println("\nERROR: No puede ser un campo vacío");
+			respuesta = pideDatoCadena(pregunta);
+		}
+		
+		return respuesta;
+	}
+	
+	/**
+	 * Este método sirve para pedir datos por pantalla de tipo cadena de caracteres, y comprueba que 
+	 * la respuesta del usuario no se pase del máximo
+	 */
+	public static String pideDatoCadena(String pregunta, int max) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		} catch (IOException e) {
+			System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
+			Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
+			respuesta = pideDatoCadena(pregunta);
+		}
+		
+		if(respuesta.length() == 0) {
+			System.out.println("\nERROR: No puede ser un campo vacío");
+			respuesta = pideDatoCadena(pregunta, max);
+		}
+
+		if(respuesta.length() > max) {
+			System.out.println("\nERROR: Máximo "+max+" caracteres.");
+			respuesta = pideDatoCadena(pregunta, max);
 		}
 		return respuesta;
 	}
@@ -41,9 +91,6 @@ public class Utiles {
 	/**
 	 * Este método sirve para pedir datos por pantalla de tipo cadena de caracteres
 	 * y comprueba que no haya dígitos en esa cadena
-	 * 
-	 * @param pregunta
-	 * @return
 	 */
 	public static String pideDatoCadenaNoNumerica(String pregunta) {
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
@@ -52,8 +99,14 @@ public class Utiles {
 		try {
 			respuesta = teclado.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			// e.printStackTrace();
+			System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
+			Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
+			respuesta = pideDatoCadenaNoNumerica(pregunta);
+		}
+		
+		if(respuesta.length() == 0) {
+			System.out.println("\nERROR: No puede ser un campo vacío");
+			respuesta = pideDatoCadenaNoNumerica(pregunta);
 		}
 		
 		//Comprueba con una regexp que no haya ningun digito en la cadena introducida por el usuario
@@ -61,15 +114,48 @@ public class Utiles {
 			System.out.println("\nERROR: No puede introducir ningún dígito.");
 			respuesta = pideDatoCadenaNoNumerica(pregunta);
 		}
+		
+		return respuesta;
+	}
+	
+	
+	/**
+	 * Este método sirve para pedir datos por pantalla de tipo cadena de caracteres,
+	 * comprueba que no haya dígitos en esa cadena y que 
+	 * la respuesta del usuario no se pase del máximo
+	 */
+	public static String pideDatoCadenaNoNumerica(String pregunta, int max) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta = ""; // con esto sabemos que al menos nos va a devolver una cadena vacia
+		System.out.print(pregunta);
+		try {
+			respuesta = teclado.readLine();
+		} catch (IOException e) {
+			System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
+			Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
+			respuesta = pideDatoCadenaNoNumerica(pregunta);
+		}
+		
+		if(respuesta.length() == 0) {
+			System.out.println("\nERROR: No puede ser un campo vacío");
+			respuesta = pideDatoCadenaNoNumerica(pregunta, max);
+		}
+		
+		//Comprueba con una regexp que no haya ningun digito en la cadena introducida por el usuario
+		if (respuesta.matches(".*\\d.*")) {
+			System.out.println("\nERROR: No puede introducir ningún dígito.");
+			respuesta = pideDatoCadenaNoNumerica(pregunta, max);
+		}
+		
+		if(respuesta.length() > max) {
+			System.out.println("\nERROR: Máximo "+max+" caracteres.");
+			respuesta = pideDatoCadena(pregunta, max);
+		}
 		return respuesta;
 	}
 
 	/**
 	 * Este método sirve para pedir datos por pantalla de tipo numero entero
-	 * 
-	 * @param pregunta
-	 * @return
-	 * @version 1.1 - Trata todos los errores (creo)
 	 */
 	public static Integer pideDatoEntero(String pregunta) {
 		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
@@ -81,12 +167,15 @@ public class Utiles {
 				respuesta = Integer.parseInt(teclado.readLine());
 			} catch (IOException e) {
 				System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
+				Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
 				respuesta = pideDatoEntero(pregunta);
 			} catch (NumberFormatException e) {
 				System.out.println("\nERROR: Debe introducir un NÚMERO entero no negativo");
+				Log.escribeLog("ERROR: Debe introducir un NÚMERO entero no negativo. \n"+e.getStackTrace().toString());
 				respuesta = pideDatoEntero(pregunta);
 			} catch (Exception e) {
 				System.out.println("\nERROR: " + e.getMessage() + ". Introduzca otra vez el dato, por favor.");
+				Log.escribeLog("ERROR: \n"+e.getStackTrace().toString());
 				respuesta = pideDatoEntero(pregunta);
 			}
 			
@@ -98,6 +187,47 @@ public class Utiles {
 		
 		return respuesta;
 	}
+	
+	
+	/**
+	 * Este método sirve para pedir datos por pantalla de tipo numero entero
+	 */
+	public static Integer pideDatoEntero(String pregunta, int max) {
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		Integer respuesta = 0;
+
+		do {
+			System.out.print(pregunta);
+			try {
+				respuesta = Integer.parseInt(teclado.readLine());
+			} catch (IOException e) {
+				System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
+				Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
+				respuesta = pideDatoEntero(pregunta);
+			} catch (NumberFormatException e) {
+				System.out.println("\nERROR: Debe introducir un NÚMERO entero no negativo");
+				Log.escribeLog("ERROR: Debe introducir un NÚMERO entero no negativo. \n"+e.getStackTrace().toString());
+				respuesta = pideDatoEntero(pregunta);
+			} catch (Exception e) {
+				System.out.println("\nERROR: " + e.getMessage() + ". Introduzca otra vez el dato, por favor.");
+				Log.escribeLog("ERROR: \n"+e.getStackTrace().toString());
+				respuesta = pideDatoEntero(pregunta);
+			}
+			
+			if(respuesta < 0) {
+				System.out.println("\nERROR: Debe introducir un número entero NO NEGATIVO");
+			}
+			
+		}while(respuesta < 0);
+		
+		if(respuesta.toString().length() > max) {
+			System.out.println("\nERROR: Máximo "+max+" caracteres.");
+			respuesta = pideDatoEntero(pregunta, max);
+		}
+		
+		return respuesta;
+	}
+	
 	
 	public static TpHoja pideDatoTpHoja() {
 		int opcion = 0;
@@ -170,10 +300,6 @@ public class Utiles {
 	/**
 	 * Comprueba si la opcion del menu es incorrecta. Devuelve 
 	 * true si es incorrecta, false si es correcta
-	 * @param opcion
-	 * @param min
-	 * @param max
-	 * @return
 	 */
 	public static boolean compruebaOpcionIncorrecta(int opcion, int min, int max) {
 		boolean resul = false;
@@ -195,7 +321,7 @@ public class Utiles {
 		try {
 			teclado.readLine();
 		} catch (Exception e) {
-			//TODO Gestionar excepciones
+		Log.escribeLog("ERROR: \n"+e.getStackTrace().toString());
 		}
 	}
 }
