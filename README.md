@@ -15,26 +15,6 @@ parseados en JSON. Se utiliza la librería 'GSON' para pasar de objeto a JSON y 
 JSON a objeto.
 
 Por último, también almacena los movimientos del usuario en el archivo 'Log.txt'. 
-_____________________________________________________________________________________________
-Muestra del menú de la aplicación:
-
-MENÚ PRINCIPAL
-===============
-1.  Añadir elemento
-2.  Borrar elemento
-3.  Modificar elemento
-4.  Cargar Lista
-5.  Listar
---------- LOG ---------
-6.  Ver Log
-7.  Borrar Log
---------- BBDD --------
-8.  Restaurar Datos
-9.  Sobreescribir Datos
-10. Borrar Datos
-11. Imprimir Datos Almacenados
------------------------
-0. Salir
 
 _____________________________________________________________________________________________
 Enlaces a .jar que hay que incluir en el proyecto:
