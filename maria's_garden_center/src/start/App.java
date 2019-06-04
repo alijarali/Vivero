@@ -1,21 +1,26 @@
 package start;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
+import comparadores.ComparaTipo;
 import otros.Log;
 import otros.Producto;
 import otros.Utiles;
+import otros.BaseDatos;
 
 /**
  * Es la clase principal, la que contiene el main.
  */
 public class App {
 	public static List<Producto> lstProductos = new ArrayList<>();
-
+	
 	public static void main(String[] args) {
 		
 		Log.escribeLog("El usuario inicia el programa.");
+		BaseDatos.creaBD();		
 		
 		int opcion = 0;
 		do {
@@ -23,7 +28,7 @@ public class App {
 			do {
 			opcion = otros.Utiles.pideDatoEntero("Opción: ");
 			ejecutarOpcion(opcion);
-			}while(Utiles.compruebaOpcionIncorrecta(opcion, 0, 7));
+			}while(Utiles.compruebaOpcionIncorrecta(opcion, 0, 11));
 
 		} while (opcion != 0);
 		String respuesta = "";
@@ -54,6 +59,10 @@ public class App {
 			break;
 		case 4:
 			opciones.CargarLista.cargarLista();
+			Comparator<Producto> compTpCo = new ComparaTipo();
+			Collections.sort(start.App.lstProductos, compTpCo);
+			System.out.println(lstProductos.toString());
+			Utiles.enterParaContinuar();
 			break;
 		case 5:
 			Log.escribeLog("El usuario entra en Listar");
@@ -67,6 +76,26 @@ public class App {
 			break;
 		case 7:
 			Log.borraLog();
+			Utiles.enterParaContinuar();
+			break;
+		case 8:
+			Log.escribeLog("El usuario restaura los datos");
+			BaseDatos.restauraDatos();
+			System.out.println(lstProductos.toString());
+			Utiles.enterParaContinuar();
+			
+			break;
+		case 9:
+			Log.escribeLog("El usuario sobreescribe los datos");
+			BaseDatos.guardaDatos(lstProductos);			
+			break;
+		case 10:
+			Log.escribeLog("El usuario borra los datos");
+			BaseDatos.reiniciaBD();
+			break;
+		case 11:
+			Log.escribeLog("El usuario imprime los datos");
+			BaseDatos.imprimeDatos();
 			Utiles.enterParaContinuar();
 			break;
 		}
@@ -88,10 +117,10 @@ public class App {
 		menu = menu.concat("8.  Restaurar Datos\n");
 		menu = menu.concat("9.  Sobreescribir Datos\n");
 		menu = menu.concat("10. Borrar Datos\n");
+		menu = menu.concat("11. Imprimir Datos Almacenados\n");
 		menu = menu.concat("-----------------------\n");
 		menu = menu.concat("0. Salir");
 		
 		System.out.println(menu);
 	}
-
 }

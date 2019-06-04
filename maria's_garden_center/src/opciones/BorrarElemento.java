@@ -1,7 +1,6 @@
 package opciones;
 
 import otros.Log;
-import otros.Producto;
 import otros.Utiles;
 
 /**
