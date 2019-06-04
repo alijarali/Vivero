@@ -1,11 +1,8 @@
 package start;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-import comparadores.ComparaTipo;
 import otros.Log;
 import otros.Producto;
 import otros.Utiles;
