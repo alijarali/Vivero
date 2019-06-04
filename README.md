@@ -9,7 +9,7 @@ Aplicación Java que almacena los productos de un vivero, permite lo siguiente:
  - Listar los productos.
  
 Además, cuenta con una base de datos (SQLite) en la que se puede guardar una 
-copia (Sobreescribir Datos) de la lista para restaurala (Restaurar Datos) 
+copia (Sobreescribir Datos) de la lista para restaurarla (Restaurar Datos) 
 en cualquier momento. Los elementos de la lista se almacenan en la base de datos
 parseados en JSON. Se utiliza la librería 'GSON' para pasar de objeto a JSON y de 
 JSON a objeto.
