@@ -59,10 +59,6 @@ public class App {
 			break;
 		case 4:
 			opciones.CargarLista.cargarLista();
-			Comparator<Producto> compTpCo = new ComparaTipo();
-			Collections.sort(start.App.lstProductos, compTpCo);
-			System.out.println(lstProductos.toString());
-			Utiles.enterParaContinuar();
 			break;
 		case 5:
 			Log.escribeLog("El usuario entra en Listar");
@@ -81,17 +77,18 @@ public class App {
 		case 8:
 			Log.escribeLog("El usuario restaura los datos");
 			BaseDatos.restauraDatos();
-			System.out.println(lstProductos.toString());
 			Utiles.enterParaContinuar();
-			
 			break;
 		case 9:
 			Log.escribeLog("El usuario sobreescribe los datos");
-			BaseDatos.guardaDatos(lstProductos);			
+			BaseDatos.guardaDatos(lstProductos);	
+			Utiles.enterParaContinuar();
 			break;
 		case 10:
 			Log.escribeLog("El usuario borra los datos");
 			BaseDatos.reiniciaBD();
+	        System.out.println("\nSe han eliminado los datos de la Base de Datos");
+			Utiles.enterParaContinuar();
 			break;
 		case 11:
 			Log.escribeLog("El usuario imprime los datos");

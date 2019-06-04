@@ -64,7 +64,7 @@ public class Utiles {
 		} catch (IOException e) {
 			System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
 			Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
-			respuesta = pideDatoCadena(pregunta);
+			respuesta = pideDatoCadena(pregunta, max);
 		}
 		
 		if(respuesta.length() == 0) {
@@ -140,7 +140,7 @@ public class Utiles {
 		
 		if(respuesta.length() > max) {
 			System.out.println("\nERROR: Máximo "+max+" caracteres.");
-			respuesta = pideDatoCadena(pregunta, max);
+			respuesta = pideDatoCadenaNoNumerica(pregunta, max);
 		}
 		return respuesta;
 	}
@@ -194,15 +194,15 @@ public class Utiles {
 			} catch (IOException e) {
 				System.out.println("\nERROR: Ha habido un error de Entrada/Salida. Introduzca otra vez el dato, por favor.");
 				Log.escribeLog("ERROR: Problema de I/O. \n"+e.getStackTrace().toString());
-				respuesta = pideDatoEntero(pregunta);
+				respuesta = pideDatoEntero(pregunta, max);
 			} catch (NumberFormatException e) {
 				System.out.println("\nERROR: Debe introducir un NÚMERO entero no negativo");
 				Log.escribeLog("ERROR: Debe introducir un NÚMERO entero no negativo. \n"+e.getStackTrace().toString());
-				respuesta = pideDatoEntero(pregunta);
+				respuesta = pideDatoEntero(pregunta, max);
 			} catch (Exception e) {
 				System.out.println("\nERROR: " + e.getMessage() + ". Introduzca otra vez el dato, por favor.");
 				Log.escribeLog("ERROR: \n"+e.getStackTrace().toString());
-				respuesta = pideDatoEntero(pregunta);
+				respuesta = pideDatoEntero(pregunta, max);
 			}
 			
 			if(respuesta < 0) {
