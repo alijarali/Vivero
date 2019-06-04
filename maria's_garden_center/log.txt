@@ -1,0 +1,185 @@
+<12:31:07 04/06/2019>
+El usuario entra en Modificar Elemento
+
+<12:31:07 04/06/2019>
+El resultado de mostrar la lista fue:
+
+Lista ordenada por el tipo:
+====================================================================================================================
+					TABLA DE PRODUCTOS
+====================================================================================================================
+--------------------------------------------------------------------------------------------------------------------
+					PLANTAS
+
+Pos Código Altura TipoHoja       ColorFlor Riego           Fruta DiamBase      Época       Tipo
+--------------------------------------------------------------------------------------------------------------------
+  1   p001      3  PERENNE       Amarillas     7               -        -      ANUAL    ARBUSTO
+  2 sdfghj  11631   CADUCA         sdjhsjd 23262               -        -      ANUAL    ARBUSTO
+
+--------------------------------------------------------------------------------------------------------------------
+					COMPLEMENTOS
+
+Pos Código PesoMax            Proveedor      Abono               Componentes Capacidad Altura      Época       Tipo
+--------------------------------------------------------------------------------------------------------------------
+  3   a002       4       Legal Cannabis    NATURAL         Platano y Naranja         -      -   INVIERNO      ABONO
+  4   m001       3           Green shop          -                         -         3      2          -     MACETA
+  5   m002       3           Green shop          -                         -         3      2          -     MACETA
+  6   m122       3           Green shop          -                         -         3      2          -     MACETA
+  7  sdfsd      45              dfsdfsd          -                         -   5565656   5454          -     MACETA
+
+
+<12:31:42 04/06/2019>
+El usuario modifica el elemento 2:
+	Arbusto [ Codigo= sdfghj, Tipo Hoja= CADUCA, Altura= 11631, Color flor=sdjhsjd, Veces riego semana=23262, epoca=ANUAL]
+	--> Arbusto [ Codigo= 45, Tipo Hoja= OTRO, Altura= 3, Color flor=rosa, Veces riego semana=7, epoca=INVIERNO]
+
+<12:31:58 04/06/2019>
+El usuario entra en Muestra Log
+
+<12:32:26 04/06/2019>
+El usuario sobreescribe los datos
+
+<12:32:26 04/06/2019>
+Se crea la base de datos.
+
+<12:32:26 04/06/2019>
+Se crea la base de datos.
+
+<12:32:57 04/06/2019>
+El usuario imprime los datos
+
+<12:33:26 04/06/2019>
+El usuario cierra el programa.
+
+<12:33:31 04/06/2019>
+El usuario inicia el programa.
+
+<12:33:32 04/06/2019>
+Se crea la base de datos.
+
+<12:33:40 04/06/2019>
+El usuario restaura los datos
+
+<12:33:40 04/06/2019>
+Añadido: Arbusto [ Codigo= p001, Tipo Hoja= PERENNE, Altura= 3, Color flor=Amarillas, Veces riego semana=7, epoca=ANUAL]
+
+<12:33:40 04/06/2019>
+Añadido: Arbusto [ Codigo= 45, Tipo Hoja= OTRO, Altura= 3, Color flor=rosa, Veces riego semana=7, epoca=INVIERNO]
+
+<12:33:40 04/06/2019>
+Añadido: Abono [ Codigo: a002, Peso Máximo: 4, Proveedor: Legal Cannabis, Componentes: Platano y Naranja, Tipo Abono: NATURAL, Época: INVIERNO]
+
+<12:33:40 04/06/2019>
+Añadido: Maceta [ Código: m001, Peso Máximo: 3, Proveedor: Green shop, Capacidad: 3, Altura: 2]
+
+<12:33:40 04/06/2019>
+Añadido: Maceta [ Código: m002, Peso Máximo: 3, Proveedor: Green shop, Capacidad: 3, Altura: 2]
+
+<12:33:40 04/06/2019>
+Añadido: Maceta [ Código: m122, Peso Máximo: 3, Proveedor: Green shop, Capacidad: 3, Altura: 2]
+
+<12:33:40 04/06/2019>
+Añadido: Maceta [ Código: sdfsd, Peso Máximo: 45, Proveedor: dfsdfsd, Capacidad: 5565656, Altura: 5454]
+
+<12:33:44 04/06/2019>
+El usuario imprime los datos
+
+<12:33:51 04/06/2019>
+El usuario entra en Listar
+
+<12:33:51 04/06/2019>
+El resultado de mostrar la lista fue:
+
+Lista ordenada por el tipo:
+====================================================================================================================
+					TABLA DE PRODUCTOS
+====================================================================================================================
+--------------------------------------------------------------------------------------------------------------------
+					PLANTAS
+
+Pos Código Altura TipoHoja       ColorFlor Riego           Fruta DiamBase      Época       Tipo
+--------------------------------------------------------------------------------------------------------------------
+  1     45      3     OTRO            rosa     7               -        -   INVIERNO    ARBUSTO
+  2   p001      3  PERENNE       Amarillas     7               -        -      ANUAL    ARBUSTO
+
+--------------------------------------------------------------------------------------------------------------------
+					COMPLEMENTOS
+
+Pos Código PesoMax            Proveedor      Abono               Componentes Capacidad Altura      Época       Tipo
+--------------------------------------------------------------------------------------------------------------------
+  3   a002       4       Legal Cannabis    NATURAL         Platano y Naranja         -      -   INVIERNO      ABONO
+  4   m001       3           Green shop          -                         -         3      2          -     MACETA
+  5   m002       3           Green shop          -                         -         3      2          -     MACETA
+  6   m122       3           Green shop          -                         -         3      2          -     MACETA
+  7  sdfsd      45              dfsdfsd          -                         -   5565656   5454          -     MACETA
+
+
+<12:34:50 04/06/2019>
+El usuario cierra el programa.
+
+<12:35:19 04/06/2019>
+El usuario inicia el programa.
+
+<12:35:20 04/06/2019>
+Se crea la base de datos.
+
+<12:35:24 04/06/2019>
+El usuario restaura los datos
+
+<12:35:24 04/06/2019>
+Añadido: Arbusto [ Codigo= p001, Tipo Hoja= PERENNE, Altura= 3, Color flor=Amarillas, Veces riego semana=7, epoca=ANUAL]
+
+<12:35:24 04/06/2019>
+Añadido: Arbusto [ Codigo= 45, Tipo Hoja= OTRO, Altura= 3, Color flor=rosa, Veces riego semana=7, epoca=INVIERNO]
+
+<12:35:24 04/06/2019>
+Añadido: Abono [ Codigo: a002, Peso Máximo: 4, Proveedor: Legal Cannabis, Componentes: Platano y Naranja, Tipo Abono: NATURAL, Época: INVIERNO]
+
+<12:35:24 04/06/2019>
+Añadido: Maceta [ Código: m001, Peso Máximo: 3, Proveedor: Green shop, Capacidad: 3, Altura: 2]
+
+<12:35:24 04/06/2019>
+Añadido: Maceta [ Código: m002, Peso Máximo: 3, Proveedor: Green shop, Capacidad: 3, Altura: 2]
+
+<12:35:24 04/06/2019>
+Añadido: Maceta [ Código: m122, Peso Máximo: 3, Proveedor: Green shop, Capacidad: 3, Altura: 2]
+
+<12:35:24 04/06/2019>
+Añadido: Maceta [ Código: sdfsd, Peso Máximo: 45, Proveedor: dfsdfsd, Capacidad: 5565656, Altura: 5454]
+
+<12:35:29 04/06/2019>
+El usuario imprime los datos
+
+<12:35:39 04/06/2019>
+El usuario entra en Listar
+
+<12:35:39 04/06/2019>
+El resultado de mostrar la lista fue:
+
+Lista ordenada por el tipo:
+====================================================================================================================
+					TABLA DE PRODUCTOS
+====================================================================================================================
+--------------------------------------------------------------------------------------------------------------------
+					PLANTAS
+
+Pos Código Altura TipoHoja       ColorFlor Riego           Fruta DiamBase      Época       Tipo
+--------------------------------------------------------------------------------------------------------------------
+  1     45      3     OTRO            rosa     7               -        -   INVIERNO    ARBUSTO
+  2   p001      3  PERENNE       Amarillas     7               -        -      ANUAL    ARBUSTO
+
+--------------------------------------------------------------------------------------------------------------------
+					COMPLEMENTOS
+
+Pos Código PesoMax            Proveedor      Abono               Componentes Capacidad Altura      Época       Tipo
+--------------------------------------------------------------------------------------------------------------------
+  3   a002       4       Legal Cannabis    NATURAL         Platano y Naranja         -      -   INVIERNO      ABONO
+  4   m001       3           Green shop          -                         -         3      2          -     MACETA
+  5   m002       3           Green shop          -                         -         3      2          -     MACETA
+  6   m122       3           Green shop          -                         -         3      2          -     MACETA
+  7  sdfsd      45              dfsdfsd          -                         -   5565656   5454          -     MACETA
+
+
+<12:35:43 04/06/2019>
+El usuario cierra el programa.
+

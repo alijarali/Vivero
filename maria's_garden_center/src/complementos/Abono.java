@@ -3,7 +3,10 @@ package complementos;
 import otros.Informacion;
 
 import tipos.TpAbono;
-
+/**
+ * Clase para crear los objetos tipo "Abono"
+ *
+ */
 public class Abono extends Complemento implements Informacion {
 	private String componentes;
 	private TpAbono tipoAbono;

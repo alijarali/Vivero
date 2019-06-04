@@ -1,6 +1,10 @@
 package complementos;
-
+/**
+	 * Clase para crear los objetos tipo "Maceta"
+	 *
+	 */
 public class Maceta extends Complemento {
+	
 	private Integer capacidad;
 	private Integer altura;	
 	

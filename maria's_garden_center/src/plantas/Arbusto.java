@@ -3,7 +3,10 @@ package plantas;
 import otros.Informacion;
 
 import tipos.TpHoja;
-
+/**
+ * Clase para crear los objetos tipo "Arbusto"
+ *
+ */
 public class Arbusto extends Planta implements Informacion {
 	private String colorFlor;
 	private Integer vecesRiegoSemana;

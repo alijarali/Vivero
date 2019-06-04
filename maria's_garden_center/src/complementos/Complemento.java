@@ -1,7 +1,10 @@
 package complementos;
 
 import otros.Producto;
-
+/**
+ * Clase para crear los objetos tipo "Complemento"
+ *
+ */
 public class Complemento extends Producto {
 	private Integer pesoMaximo;
 	private String proveedor;
