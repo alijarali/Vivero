@@ -183,3 +183,15 @@ Pos Código PesoMax            Proveedor      Abono               Componentes Cap
 <12:35:43 04/06/2019>
 El usuario cierra el programa.
 
+<14:12:59 04/06/2019>
+El usuario inicia el programa.
+
+<14:12:59 04/06/2019>
+Se crea la base de datos.
+
+<14:13:07 04/06/2019>
+El usuario imprime los datos
+
+<14:13:15 04/06/2019>
+El usuario cierra el programa.
+
